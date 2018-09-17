@@ -1,0 +1,18 @@
+{
+      "pages": [
+         
+            "pages/index/index",
+            "pages/home/index",
+            "pages/videoVIew/index",
+            "pages/replyComment/index",
+            "pages/newsView/index"
+      ],
+      "window": {
+            "backgroundTextStyle": "#333333",
+            "navigationStyle": "default",
+            "navigationBarBackgroundColor": "#f75c7a",
+            "navigationBarTextStyle": "white",
+            "navigationBarTitleText": "歌姬动态",
+            "enablePullDownRefresh": true
+      }
+}

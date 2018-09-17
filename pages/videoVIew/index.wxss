@@ -1,0 +1,73 @@
+.container {
+      padding: 28rpx;
+}
+
+.item {
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      padding-bottom: 20rpx;
+      border-bottom: 1px solid #787878;
+}
+
+.item .video-poster {
+      position: absolute;
+      width: 95%;
+      margin: 14rpx 22rpx;
+      top: 0;
+      left: 0;
+      -webkit-clip-path: polygon(5.5% 0%, 100% 0%, 100% 90%, 94.5% 100%, 0% 100%, 0% 10%);
+}
+
+.video-info {
+      padding: 20rpx 0 10rpx 0;
+      line-height: 1.6;
+}
+
+.video .video-title {
+      font-size: 30rpx;
+      letter-spacing: 1px;
+}
+
+.comment-input-wrp input {
+         color: #3d3d3d;
+      font-size: 28rpx;
+      padding: 4rpx 0rpx;
+      background: #ebebeb;
+      border-radius: 14%/50%;
+     width: auto;
+      text-align: center;
+      padding-left: -6rpx;
+       transition: all 1s;
+}
+
+.comment-input-wrp input.cover {
+      width: 100%;
+      border-radius: 6%/50%;
+}
+.comment-input-wrp .placeholder{
+      padding: 0 20rpx;
+}
+.comment-input-wrp .count-wrp {
+      width: auto;
+      transform: translate(0%, 0);
+      transition: all 0.5s;
+}
+
+.comment-input-wrp .count-wrp.hidden {
+      transform: translate(150%, 0);
+      width: 0;
+}
+
+.comment-input-wrp .icon {
+      width: 28rpx;
+      padding-right: 6rpx;
+}
+
+.comment-input-wrp .icon.icon-comment {
+      width: 24rpx;
+}
+
+.comment-input-wrp .item-count {
+      padding-right: 16rpx;
+}

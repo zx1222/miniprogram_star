@@ -1,0 +1,150 @@
+image {
+      /* will-change: transform; */
+      height: auto;
+      vertical-align: bottom;
+}
+
+.w100 {
+      width: 100%;
+}
+
+.none {
+      display: none;
+}
+
+.text-left {
+      text-align: left;
+}
+
+.text-center {
+      text-align: center;
+}
+
+.bold {
+      font-weight: bold;
+}
+
+/* flex start*/
+
+.flex {
+      display: flex;
+      /* flex-wrap: wrap; */
+}
+
+.flex-c {
+      flex-direction: column;
+}
+
+.align-items-center {
+      align-items: center;
+}
+
+.align-items-end {
+      align-items: flex-end;
+}
+
+.justify-content-between {
+      justify-content: space-between;
+}
+
+.justify-content-center {
+      justify-content: center;
+}
+.justify-content-end{
+      justify-content: flex-end
+}
+
+/* bg */
+.bg-light-gray{
+      background: #f7f7f7;
+}
+/* bg end*/
+
+/* flex end*/
+
+.none {
+      display: none;
+}
+
+.text-left {
+      text-align: left;
+}
+
+.text-center {
+      text-align: center;
+}
+
+/* text color */
+
+.text-pink {
+      color: #e95471;
+}
+
+.text-white {
+      color: #fff;
+}
+
+.text-blue{
+      color: #2d63a0;
+}
+
+
+/* text color end*/
+
+/* text size */
+
+.text-xs {
+      font-size: 24rpx;
+}
+
+.text-m {
+      font-size: 30rpx;
+}
+
+/* text size end*/
+
+/*  letter-spacing*/
+
+.letter-sp1 {
+      letter-spacing: 1px;
+}
+
+.letter-sp2 {
+      letter-spacing: 2px;
+}
+
+/*  letter-spacing end*/
+
+/* text align */
+
+.text-center {
+      text-align: center;
+}
+
+.text-right {
+      text-align: right;
+}
+
+.text-left {
+      text-align: left;
+}
+
+/* text align end*/
+
+/* 文本限制 */
+
+.text-overflow2 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+}
+
+.text-overflow1 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+}
+
+/* 文本限制 end */

@@ -1,0 +1,40 @@
+<view class="container">
+      <view class='item video-item'>
+            <view class='poster-wrp w100'>
+                  <image class='poster-border w100' src='http://192.168.0.189/20180507/star_project/web/star_img/video-border.png' mode='widthFix'></image>
+                  <image class='video-poster w100' src='{{item.poster}}' mode='widthFix'></image>
+            </view>
+            <view class='video-info'>
+                  <view class='video-title bold'>{{item.title}}</view>
+                  <view class='date text-pink text-xs'>{{item.date}}</view>
+            </view>
+            <view class='comment-input-wrp w100 flex justify-content-between align-items-center'>
+            <input class="{{is_focus?'cover':''}}" placeholder="我也说一句..." placeholder-class='placeholder bold letter-sp1' bindfocus="focusChange" bindblur='blurChange' focus="{{false}}" />
+                  <!-- <view class='btn-comment'>我也说一句...</view> -->
+                  <view class="{{is_focus?'hidden':''}}  count-wrp flex  align-items-center justify-content-end  text-xs">
+                        <view class='item-count flex align-items-center justify-content-end'>
+                              <image src='../../images/icon-comment.png' class='icon icon-comment' mode='widthFix'></image>
+                              <text class='count'>{{item.comment_count}}</text>
+                        </view>
+                        <view class='item-count flex align-items-center'>
+                              <image src='../../images/icon-like.png' class='icon icon-like' mode='widthFix'></image>
+                              <text class='count'>{{item.like_count}}</text>
+                        </view>
+                        <view class='item-count flex align-items-center'>
+                              <image src='../../images/icon-forward.png' class='icon icon-forward' mode='widthFix'></image>
+                        </view>
+                        <view class='item-count flex align-items-center'>
+                              <image src='../../images/icon-start.png' class='icon icon-start' mode='widthFix'></image>
+                        </view>
+                  </view>
+            </view>
+
+      </view>
+      <view class='comment-list-wrp'>
+            <comment_p_list comment_list="{{comment_list}}"></comment_p_list>
+            <view class="weui-loadmore" wx:if="{{loading}}">
+                  <view class="weui-loading"></view>
+                  <view class="weui-loadmore__tips">正在加载</view>
+            </view>
+      </view>
+</view>
