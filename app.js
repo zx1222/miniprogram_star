@@ -5,8 +5,41 @@ App({
       readyCallback: null,
       globalData: {
             // 1 男 2 女
-            theme:1,
-            
+            gender: 2,
+            genderTheme: [{
+                        main: '#8d9acd',
+                        sub: '#c5d7ee'
+                  },
+                  {
+                        main: '#e95471',
+                        sub: '#f4a9b8'
+                  },
+            ],
+
+            // 歌姬颜色列表
+            // 1 卡缇娅 2 罗兹 3 清歌 4 伊莎贝拉 5 玉藻
+            idolTheme: [{
+                        main: '#9b86bd',
+                        sub: '#f0d3e4'
+                  },
+                  {
+                        main: '#ef878c',
+                        sub: '#f8caab'
+                  },
+                  {
+                        main: '#8d9acd',
+                        sub: '#c5d7ee'
+                  },
+                  {
+                        main: '#f5ad75',
+                        sub: '#fad6a8'
+                  },
+                  {
+                        main: '#e169a4',
+                        sub: '#f7c4ce'
+                  }
+            ],
+
 
 
 
@@ -15,10 +48,10 @@ App({
             is_first: wx.getStorageSync('is_first'),
             user_sign_count: 0,
             // 当前活动在存储中的index
-            activity_index:0,
+            activity_index: 0,
             // 判断苹果手机型号
             activity_id: '',
-            activity_name:'',
+            activity_name: '',
             iphone_type: '',
             userInfo: null,
             access_token: '',
@@ -30,7 +63,7 @@ App({
             activity_is_comico: 1,
             activity_is_perform: 1,
             activity_is_run: 1,
-            run_number_limit:2,
+            run_number_limit: 2,
             // 是否开始报名 1是 2否
             is_sign_up: 2,
             // 是否结束报名 1是 2否
@@ -45,7 +78,7 @@ App({
             // 当前活动是否返现 1返现 2不返现
             is_cash: '2',
             // 有待支付订单 1存在 2不存在
-            is_unpay_order:2
+            is_unpay_order: 2
       },
       onLaunch: function() {
             let info = wx.getSystemInfoSync();
@@ -99,28 +132,42 @@ App({
             wx.loadFontFace({
                   family: 'FZLTHJT',
                   source: 'url("http://192.168.0.189/20180507/star_project/web/star_img/FZLTHJT.ttf")',
-                  success: function (res) {
+                  success: function(res) {
                         console.log(res)
                         console.log(res.status) //  loaded
                   },
-                  fail: function (res) {
+                  fail: function(res) {
                         console.log(res.status) //  error
                   },
-                  complete: function (res) {
+                  complete: function(res) {
                         console.log(res.status);
                   }
             });
             wx.loadFontFace({
                   family: 'FZZCHJT',
                   source: 'url("http://192.168.0.189/20180507/star_project/web/star_img/FZZCHJT.ttf")',
-                  success: function (res) {
+                  success: function(res) {
                         console.log(res)
                         console.log(res.status) //  loaded
                   },
-                  fail: function (res) {
+                  fail: function(res) {
                         console.log(res.status) //  error
                   },
-                  complete: function (res) {
+                  complete: function(res) {
+                        console.log(res.status);
+                  }
+            });
+            wx.loadFontFace({
+                  family: 'FZLTCHJT',
+                  source: 'url("http://192.168.0.189/20180507/star_project/web/star_img/FZLTCHJT.ttf")',
+                  success: function(res) {
+                        console.log(res)
+                        console.log(res.status) //  loaded
+                  },
+                  fail: function(res) {
+                        console.log(res.status) //  error
+                  },
+                  complete: function(res) {
                         console.log(res.status);
                   }
             });

@@ -18,7 +18,7 @@
 }
 
 .comment-list-wrp{
-      padding-bottom: 86rpx;
+      padding:0 24rpx 86rpx 24rpx;
 }
 /* 评论input */
 

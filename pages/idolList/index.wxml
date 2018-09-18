@@ -1,0 +1,56 @@
+<view class="container text-black ">
+      <view class='idol-list flex  flex-c justify-content-between'>
+            <view class=' w100 item ' wx:for="{{list}}" wx:key="{{index}}">
+                  <image wx:if="{{index==0}}" src='../../images/idol-list-border1.png' class='border'></image>
+                  <image wx:if="{{index==1}}" src='../../images/idol-list-border2.png' class='border'></image>
+                  <image wx:if="{{index==2}}" src='../../images/idol-list-border3.png' class='border'></image>
+                  <image wx:if="{{index==3}}" src='../../images/idol-list-border4.png' class='border'></image>
+                  <image wx:if="{{index==4}}" src='../../images/idol-list-border5.png' class='border'></image>
+                  <view class='item-content w100 flex justify-content-between align-items-center'>
+                        <view class='avatar-wrp'>
+                              <view class='idol-avatar' style="box-shadow:0 0 01px #c0c0c0,0 0 0 8rpx {{idolTheme[index].main}},0 0 0 16rpx {{idolTheme[index].sub}}">
+                                    <image src='{{item.avatar}}' mode='widthFix' class='w100'></image>
+                              </view>
+                        </view>
+                        <view class='idol-info flex flex-c justify-content-between'>
+                              <view>
+                                    <view class='idol-name text-m bold letter-sp2' style="color:{{idolTheme[index].main}}">{{item.name}}</view>
+                                    <view class='idol-fans'>
+                                          <text class='text-xs bold'>粉丝数量:</text>
+                                          <text class='fans-count letter-sp1' style="color:{{idolTheme[index].main}}">{{item.fans}}</text>
+                                    </view>
+                              </view>
+
+                              <view class='idol-desc'>
+                                    <text>{{item.desc}}</text>
+                              </view>
+                              <button wx:if="{{item.is_follow==2}}" class="btn-follow btn text-white" style="background:{{idolTheme[index].main}}" bindtap='follow' data-id="{{index}}">关注</button>
+                              <button wx:if="{{item.is_follow==1}}" class="btn-follow-yet btn text-white" style="border:1px solid {{idolTheme[index].main}};color:{{idolTheme[index].main}}" data-id="{{index}}">已关注</button>
+                        </view>
+                  </view>
+            </view>
+      </view>
+
+      <tabbar-bottom class="w100" tab_id="{{tab_id}}"></tabbar-bottom>
+
+      <view class="popup flex align-items-center justify-content-center" wx:if="{{is_show}}">
+            <view class='poster text-white'>
+                  <view class='poster-inner flex flex-c justify-content-between' style="background:{{idolTheme[idol_index].main}}">
+                        <view class='header text-center 100 letter-sp1'>
+                              <view>关注成功！</view>
+                              <view>您是第123456位粉丝</view>
+                              <view class='btn-wrp flex justify-content-between'>
+                                    <view class='btn-audio'>{{this.data.list[idol_index].name}}对你说的悄悄话</view>
+                                    <view class='btn-support letter-sp2' style='color:{{idolTheme[idol_index].main}}' bindtap='turnToSupport'>为他应援</view>
+                              </view>
+                        </view>
+                        <image src='../../images/follow-poster.png' class='poster-img w100' mode='widthFix'></image>
+                  </view>
+            </view>
+            <image bindtap='closePopup' class='btn-close' src='../../images/icon-close.png' mode='widthFix'></image>
+      </view>
+
+      <!-- <view class='popup flex align-items-center justify-content-center' wx:if="{{is_toast_show}}">
+            <popup title="{{toast_title}}" content="{{toast_content}}" is_delete="{{true}}" gender="{{gender}}" bind:cancel='catchCancel' bind:confirm="catchConfirm"></popup>
+      </view> -->
+</view>

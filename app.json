@@ -1,11 +1,12 @@
 {
       "pages": [
-         
+            "pages/idolList/index",
             "pages/index/index",
             "pages/home/index",
             "pages/videoVIew/index",
             "pages/replyComment/index",
             "pages/newsView/index"
+        
       ],
       "window": {
             "backgroundTextStyle": "#333333",

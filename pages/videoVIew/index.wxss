@@ -3,11 +3,12 @@
 }
 
 .item {
+      margin: 0 6rpx;
       width: 100%;
       box-sizing: border-box;
       position: relative;
-      padding-bottom: 20rpx;
-      border-bottom: 1px solid #787878;
+   
+
 }
 
 .item .video-poster {
@@ -20,7 +21,7 @@
 }
 
 .video-info {
-      padding: 20rpx 0 10rpx 0;
+      padding: 20rpx 10rpx 10rpx 10rpx;
       line-height: 1.6;
 }
 
@@ -28,7 +29,23 @@
       font-size: 30rpx;
       letter-spacing: 1px;
 }
-
+.comment-input-wrp{
+      box-sizing: border-box;
+      padding-bottom: 20rpx;
+      width: 98%;
+        margin: 0 8rpx;
+            border-bottom: 1px solid #787878;
+}
+.comment-input-wrp .input-wrp{
+           border-radius: 14%/50%;
+           overflow: hidden;
+            transition: all .5s;
+          
+}
+.comment-input-wrp .input-wrp.cover{
+         width: 100%;
+      border-radius: 6%/50%;
+}
 .comment-input-wrp input {
          color: #3d3d3d;
       font-size: 28rpx;
@@ -38,9 +55,13 @@
      width: auto;
       text-align: center;
       padding-left: -6rpx;
-       transition: all 1s;
+       transition: all .5s;
+       overflow: hidden;
 }
-
+.comment-input-wrp input.cover {
+      width: 100%;
+      border-radius: 6%/50%;
+}
 .comment-input-wrp input.cover {
       width: 100%;
       border-radius: 6%/50%;
@@ -70,4 +91,7 @@
 
 .comment-input-wrp .item-count {
       padding-right: 16rpx;
+}
+.comment-input-wrp .item-count:last-child{
+      padding-right: 0
 }

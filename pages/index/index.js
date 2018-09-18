@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-import * as http from '../../utils/promise.js'
+import { wxRequest } from '../../utils/promise.js'
 import getSystemInfo from '../../utils/getSystemInfo.js'
 import {
       formatDate1,formatDate2
@@ -11,7 +11,8 @@ import {
 Page({
       data: {
             resultData: {},
-            tab_id: 0,
+            tab_top_id: 0,
+            tab_bottom_id:0,
             list: [{
                         poster: '../../../../images/video-poster-default.png',
                         title: '卡缇娅视频',
@@ -85,9 +86,9 @@ Page({
       },
       catchChildSwiper: function(e) {
             this.setData({
-                  tab_id: e.detail
+                  tab_top_id: e.detail
             })
-            if (this.data.tab_id == 0) {
+            if (this.data.tab_top_id == 0) {
                   this.setData({
                         resultData: {
                               banners: ['../../../../images/banner.jpg',
@@ -97,7 +98,7 @@ Page({
                         }
                   })
             }
-            if (this.data.tab_id == 1) {
+            if (this.data.tab_top_id == 1) {
                   this.setData({
                         resultData: {
                               banners: ['../../../../images/banner.jpg',
@@ -108,7 +109,7 @@ Page({
                   })
             }
 
-            if (this.data.tab_id == 6) {
+            if (this.data.tab_top_id == 6) {
                   const data = [{
                         poster: '../../../../images/video-poster-default.png',
                         title: '卡缇娅视频',
@@ -121,7 +122,7 @@ Page({
             }
       },
       getData: function() {
-            if (this.data.tab_id == 0) {
+            if (this.data.tab_top_id == 0) {
                   this.setData({
                         resultData: {
                               banners: ['../../../../images/banner.jpg',

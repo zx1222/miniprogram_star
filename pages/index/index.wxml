@@ -1,15 +1,15 @@
 <view class='container'>
       <view class="tabbar-top">
-            <contentSwiper bind:childEvent='catchChildSwiper'>>
-                  <list slot="recommend" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" loading="{{loading}}" tab_id="{{tab_id}}"></list>
-                  <list slot="live" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_id}}"></list>
-                  <list slot="comic"  topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_id}}"></list>
-                  <list slot="pv"  topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}"  list="{{list}}" tab_id="{{tab_id}}"></list>
-                  <list slot="mv" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_id}}"></list>
-                  <list slot="shortVideo"  topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_id}}"></list>
-                  <list slot="news"  topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_id}}"></list>
+            <contentSwiper bind:childEvent='catchChildSwiper'>
+                  <list slot="recommend" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" loading="{{loading}}" tab_id="{{tab_top_id}}"></list>
+                  <list slot="live" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}"></list>
+                  <list slot="comic"  topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}"></list>
+                  <list slot="pv"  topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}"  list="{{list}}" tab_id="{{tab_top_id}}"></list>
+                  <list slot="mv" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}"></list>
+                  <list slot="shortVideo"  topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}"></list>
+                  <list slot="news"  topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}"></list>
             </contentSwiper>
       </view>
 
-      <tabbar-bottom class="w100"></tabbar-bottom>
+      <tabbar-bottom class="w100" tab_id="{{tab_bottom_id}}"></tabbar-bottom>
 </view>

@@ -29,7 +29,7 @@ view {
       background-color: rgba(355, 155, 155, 0.6);
       background-blend-mode: multiply; */
       color: #585858;
-      font-family: 'FZLTHJT'
+      font-family: 'FZLTHJT';
 }
 
 ::-webkit-scrollbar {
@@ -38,6 +38,13 @@ view {
       color: transparent;
 }
 
+button {
+      padding: 0;
+}
+
+button::after {
+      display: none;
+}
 
 /* 搜索框 */
 
@@ -50,7 +57,6 @@ view {
 .weui-search-bar__form {
       border: 4rpx solid #000;
 }
-
 
 /*  加载更多  start */
 
@@ -87,6 +93,7 @@ view {
       font-size: 14px;
       text-align: center;
 }
+
 /*  加载更多  end */
 
 /* swiper */

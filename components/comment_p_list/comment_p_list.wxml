@@ -20,8 +20,8 @@
                               </view>
                         </view>
                   </view>
-                  <view class='comment-content'>{{item.comment_content}}</view>
-                  <view wx:if="{{item.has_child==1}}" class='child-comment-tips bg-light-gray'>
+                  <view class='comment-content text-m'>{{item.comment_content}}</view>
+                  <view wx:if="{{item.has_child==1}}" class='child-comment-tips bg-light-gray text-m'>
                         <text class='text-blue'>{{item.sub_name}}</text>等人
                         <text class='text-blue'>共{{item.child_count}}条回复 <text class="fa fa-angle-right" aria-hidden="true"></text></text>
                   </view>

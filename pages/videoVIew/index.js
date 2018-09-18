@@ -1,6 +1,6 @@
 // pages/videoVIew/index.js
 const app = getApp()
-import * as http from '../../utils/promise.js'
+import {wxRequest} from '../../utils/promise.js'
 import {
       formatDate2, formatDate3
 } from '../../utils/formatDate.js'

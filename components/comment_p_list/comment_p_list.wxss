@@ -3,7 +3,7 @@
 /* comment list */
 
 .comment-wrp {
-      padding: 25rpx;
+      padding: 25rpx 0;
 }
 
 .comment-wrp .avatar {
@@ -62,10 +62,11 @@
 }
 .comment-content {
       color: #050505;
-      font-size: 30rpx;
+      padding-top: 4rpx;
 }
 
 .create_time {
       font-size: 24rpx;
       color: #585858;
+      padding-top: 8rpx;
 }

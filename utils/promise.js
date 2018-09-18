@@ -1,7 +1,7 @@
 const app = getApp()
 import sha1 from 'sha1.js'
 
-export function request(url, params, method) {
+export function wxRequest(url, params, method) {
       const appid = 'miinno.com'
       const secret = '123456'
       const version = 'api/v1'
@@ -38,10 +38,4 @@ export function request(url, params, method) {
             })
       });
       return promise
-}
-
-
-
-module.exports = {
-      request: request,
 }
