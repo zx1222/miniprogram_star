@@ -401,7 +401,7 @@
 .fnasClub .btn-add {
       color: #919191;
       font-size: 70rpx;
-      position: absolute;
+      position: fixed;
       bottom: 36rpx;
       left: calc(50% - 35rpx);
 }
