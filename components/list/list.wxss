@@ -1,3 +1,4 @@
+@import '../../styles/fontawsome.wxss';
 .swiper .list-wrp {
       font-family: 'FZZCHJT';
 }
@@ -214,6 +215,9 @@
 
 .row {
       padding-top: 6rpx;
+}
+.icon-ellipsis{
+      color: #919191;
 }
 
 /* 文章列表 */

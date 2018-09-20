@@ -39,7 +39,6 @@ page, .user-container, .footer, .content-swiper {
       bottom: 0;
       width: 14.25%;
       height: 6rpx;
-   
       transition: transform 0.6s;
       -webkit-transition: transform 0.6s;
 }

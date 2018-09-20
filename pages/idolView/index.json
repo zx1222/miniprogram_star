@@ -1,0 +1,7 @@
+{
+      "component": true,
+      "usingComponents": {
+            "contentSwiper": "./components/content-swiper/content-swiper",
+            "list": "../../components/list/list"
+      }
+}

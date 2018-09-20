@@ -7,14 +7,17 @@ Component({
        * 组件的属性列表
        */
       properties: {
-
+            indicatorArr:{
+                  type:'Array',
+                  value:[]
+            }
       },
 
       /**
        * 组件的初始数据
        */
       data: {
-            indicatorArr: ['推荐', '直播', '动画', 'PV', 'MV', '短视频', '事件'],
+            // indicatorArr: ['推荐', '直播', '动画', 'PV', 'MV', '短视频', '事件'],
             swiperCurrent: 0
       },
 

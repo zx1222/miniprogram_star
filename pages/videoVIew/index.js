@@ -130,7 +130,14 @@ Page({
                   is_focus: false
             })
       },
-
+      // 获取播放进度
+      catchTimeUpdate:function(e){
+            console.log(e)
+      },
+      // 获取播放状态改变
+      catchStatusChange:function(e){
+            console.log(e)
+      },
       /**
        * 用户点击右上角分享
        */

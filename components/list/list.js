@@ -4,10 +4,6 @@ Component({
        * 组件的属性列表
        */
       properties: {
-            topicsArr: {
-                  type: 'Array',
-                  value: []
-            },
             bannerArr: {
                   type: 'Array',
                   value: []
@@ -23,6 +19,11 @@ Component({
             tab_id: {
                   type: 'number',
                   value: 0
+            },
+            // 区别首页还是歌姬详情页 1 首页 2 详情
+            p_swiper:{
+                  type:'number',
+                  value:1
             }
       },
 

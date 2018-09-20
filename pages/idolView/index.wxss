@@ -1,0 +1,222 @@
+/* pages/user/component/topic-swiper/topic-swiper.wxss */
+
+.container {
+      height: 100%;
+}
+
+.tab {
+      width: 100%;
+      height: 60rpx;
+      line-height: 60rpx;
+      background: #fff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'FZLTHJT';
+}
+
+.tab .indicator-item {
+      flex: 1;
+      color: #919191;
+      text-align: center;
+      font-size: 24rpx;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: 0.6s;
+      -webkit-transition: 0.6s;
+}
+
+.swiper-item {
+      width: 100%;
+      background: #fff;
+      overflow: auto;
+}
+
+.slider-line {
+      position: absolute;
+      bottom: 0;
+      width: 33.3%;
+      height: 6rpx;
+      transition: transform 0.6s;
+      -webkit-transition: transform 0.6s;
+}
+
+.slider-line .line-inner {
+      width: 50%;
+      background: #f66a94;
+      height: 6rpx;
+      margin-left: 25%;
+}
+
+/* 歌姬介绍 */
+
+.idol-intro {
+      width: 100%;
+      height: 100%;
+}
+
+.idol-intro .header {
+      margin: 0 40rpx;
+      padding: 40rpx 0;
+}
+
+.header  .desc-hd {
+      font-family: 'FZLTCHJT';
+      margin-bottom: 20rpx;
+      padding-left: 30rpx;
+      font-size: 28rpx;
+}
+
+/* poster */
+
+.header  .poster-wrp {
+      position: relative;
+      width: 69%;
+      margin-right: 3%;
+}
+
+.header  .poster-wrp  .poster {
+      position: absolute;
+      width: 95%;
+      margin: 10rpx 12rpx;
+      top: 0;
+      left: 0;
+      -webkit-clip-path: polygon(5.5% 0%, 100% 0%, 100% 90%, 94.5% 100%, 0% 100%, 0% 10%);
+}
+
+.header  .poster-wrp .icon {
+      position: absolute;
+      left: -4rpx;
+      top: -25rpx;
+      width: 48rpx;
+}
+
+/* poster end*/
+
+.header  .count-wrp {
+      width: 28%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+}
+
+.header  .count-wrp .row {
+      display: flex;
+      align-items: flex-end;
+}
+
+.header  .count-wrp .row .label {
+      width: 55%;
+      text-align: justify;
+      text-align-last: justify;
+      margin-bottom: 7rpx;
+}
+
+.header  .count-wrp .row  label::after {
+      width: 100%;
+      display: inline-block;
+      content: '';
+}
+
+.header  .count-wrp .row .count {
+      font-size: 36rpx;
+      letter-spacing: 2px;
+      font-family: 'FZLTCHJT';
+      padding-left: 8rpx;
+}
+
+.header  .count-wrp .btn-follow {
+      border-radius: 4rpx;
+      font-size: 24rpx;
+      letter-spacing: 4px;
+      background: #fff;
+      width: 160rpx;
+      height: 40rpx;
+      line-height: 40rpx;
+      margin-top: 20rpx;
+      margin-bottom: 26rpx;
+}
+
+.header .count-wrp .btn-support {
+      width: 160rpx;
+      height: 40rpx;
+      border-radius: 4rpx;
+      line-height: 40rpx;
+      font-size: 24rpx;
+}
+
+/* 形象 */
+
+.desc-image {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 59%;
+      position: relative;
+      background-size: 100% auto;
+      background-position:0 100%;
+     
+}
+
+.desc-image .idol {
+      margin-top: 40rpx;
+}
+
+.desc-image .country {
+      width: 62rpx;
+      height: 40rpx;
+      position: absolute;
+      left: 40rpx;
+      top: 50rpx;
+}
+
+.desc-image .info-list {
+      position: absolute;
+      right: 0;
+      top: 50rpx;
+}
+
+.desc-image .info-list .item {
+      width: 332rpx;
+      height: 48rpx;
+      line-height: 48rpx;
+      margin-bottom: 24rpx;
+      margin-right: -6rpx;
+      transform: skew(-15deg)
+}
+
+.desc-image .info-list .item .l {
+      width: 33%;
+      box-sizing: border-box;
+      padding: 0 14rpx;
+      font-size: 24rpx;
+      letter-spacing: 2px;
+      text-align: justify;
+      text-align-last: justify;
+      float: left;
+}
+
+.desc-image .info-list .item .l::after {
+      float: left;
+      width: 100%;
+      display: inline-block;
+      content: '';
+}
+
+.desc-image .info-list .item .r {
+      display: inline-block;
+      width: 67%;
+      font-size: 30rpx;
+      padding-left: 14rpx;
+      font-family: 'FZLTCHJT';
+}
+.desc-image  .sub-desc{
+      width: 304rpx;
+      height: auto;
+      position: absolute;
+      right: 42rpx;
+      top:350rpx;
+        font-family: 'FZLTHJT';
+        line-height: 1.7
+}

@@ -25,3 +25,6 @@
 .fa-angle-right:before {
   content: "\f105";
 }
+.fa-ellipsis-v:before {
+  content: "\f142";
+}

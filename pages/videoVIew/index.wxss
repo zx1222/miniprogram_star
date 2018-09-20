@@ -7,8 +7,6 @@
       width: 100%;
       box-sizing: border-box;
       position: relative;
-   
-
 }
 
 .item .video-poster {
@@ -29,46 +27,53 @@
       font-size: 30rpx;
       letter-spacing: 1px;
 }
-.comment-input-wrp{
+
+.comment-input-wrp {
       box-sizing: border-box;
       padding-bottom: 20rpx;
       width: 98%;
-        margin: 0 8rpx;
-            border-bottom: 1px solid #787878;
+      margin: 0 8rpx;
+      border-bottom: 1px solid #787878;
 }
-.comment-input-wrp .input-wrp{
-           border-radius: 14%/50%;
-           overflow: hidden;
-            transition: all .5s;
-          
+
+.comment-input-wrp .input-wrp {
+      border-radius: 9%/50%;
+      overflow: hidden;
+      transition: all 0.5s;
 }
-.comment-input-wrp .input-wrp.cover{
-         width: 100%;
-      border-radius: 6%/50%;
+
+.comment-input-wrp .input-wrp.cover {
+      width: 100%;
+      border-radius: 5%/50%;
 }
+
 .comment-input-wrp input {
-         color: #3d3d3d;
+      color: #3d3d3d;
       font-size: 28rpx;
       padding: 4rpx 0rpx;
       background: #ebebeb;
       border-radius: 14%/50%;
-     width: auto;
+      width: auto;
       text-align: center;
       padding-left: -6rpx;
-       transition: all .5s;
-       overflow: hidden;
+      transition: all 0.5s;
+      overflow: hidden;
 }
+
 .comment-input-wrp input.cover {
       width: 100%;
       border-radius: 6%/50%;
 }
+
 .comment-input-wrp input.cover {
       width: 100%;
       border-radius: 6%/50%;
 }
-.comment-input-wrp .placeholder{
+
+.comment-input-wrp .placeholder {
       padding: 0 20rpx;
 }
+
 .comment-input-wrp .count-wrp {
       width: auto;
       transform: translate(0%, 0);
@@ -92,6 +97,7 @@
 .comment-input-wrp .item-count {
       padding-right: 16rpx;
 }
-.comment-input-wrp .item-count:last-child{
-      padding-right: 0
+
+.comment-input-wrp .item-count:last-child {
+      padding-right: 0;
 }

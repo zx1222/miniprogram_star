@@ -1,0 +1,82 @@
+<!--pages/idolView/index.wxml-->
+<view class='container'>
+      <view class="tab" style=" border-bottom: 1px solid {{idolTheme[idol_index].main}};">
+            <text wx:for="{{tabArr}}" wx:key="{{index}}" data-index="{{index}}" bindtap="_tapIndicator" class="indicator-item" style="color:{{tabCurrent === index? idolTheme[idol_index].main : '' }};">{{item}}</text>
+            <view class="slider-line" style="transform: translateX({{tabCurrent * 100}}%);">
+                  <view class='line-inner' style="background:{{idolTheme[idol_index].main}}"></view>
+            </view>
+      </view>
+
+      <!--自我介绍 -->
+      <view wx:if="{{tabCurrent==0}}" class='idol-intro flex  flex-c justify-content-betweem'>
+            <!-- 自我介绍header -->
+            <view class="header" style='border-bottom:1px dashed {{idolTheme[idol_index].main}};'>
+                  <view class='desc-hd bold w100  italic' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].hd_desc}}</view>
+                  <view class='flex jsutify-content-between'>
+                        <view class='poster-wrp w100'>
+                              <image class='poster-border w100' src='../../images/idol-brief-inro_border1.png' mode='widthFix'></image>
+                              <image class='poster w100' src='../../images/poster-intro.png' mode='widthFix'></image>
+                              <image src='../../images/idol-brief-inro_icon1.png' mode='widthFix' class='icon'></image>
+                        </view>
+                        <view class='count-wrp'>
+                              <view class='row w100'>
+                                    <text class='label text-xs text-black bold'>人气值:</text>
+                                    <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].hot}}</text>
+                              </view>
+                              <view class='row w100'>
+                                    <text class='label text-xs text-black bold'>粉丝数量:</text>
+                                    <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].fans}}</text>
+                              </view>
+                              <view class='row w100'>
+                                    <text class='label text-xs text-black bold'>人气排名:</text>
+                                    <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].rank}}</text>
+                              </view>
+
+                              <view class='btn-wrp'>
+                                    <button wx:if="{{idolInfo[idol_index].is_follow==1}}" class='btn-follow' style="box-shadow:0 0 1px {{idolTheme[idol_index].main}} inset;color:{{idolTheme[idol_index].main}}">关注</button>
+                                    <button wx:if="{{idolInfo[idol_index].is_follow==2}}" style="box-shadow:0 0 0 1px {{idolTheme[idol_index].main}} inset;color:{{idolTheme[idol_index].main}}" class='btn-follow'>已关注</button>
+                                    <button class='btn-support text-white' style="background:{{idolTheme[idol_index].main}}">应援</button>
+                              </view>
+                        </view>
+                  </view>
+            </view>
+            <!-- 自我介绍形象 -->
+            <view class="desc-image" style='background:url({{idolInfo[idol_index].bg}}) no-repeat;background-size:100% auto;background-position:0 100%'>
+                  <image class='country' src='{{idolInfo[idol_index].country}}' mode='widthFix'></image>
+                  <image class='idol w100' mode='widthFix' src='{{idolInfo[idol_index].image}}'></image>
+                  <view class='info-list'>
+                        <view class='item'>
+                              <view class='l text-white' style='background:{{idolTheme[idol_index].main}}'>姓名</view>
+                              <view class='r bold letter-sp2' style='color:{{idolTheme[idol_index].main}};box-shadow:0 0 0 1px  {{idolTheme[idol_index].main}} inset'>{{idolInfo[idol_index].short_name}}</view>
+                        </view>
+                        <view class='item'>
+                              <view class='l text-white' style='background:{{idolTheme[idol_index].main}}'>生日</view>
+                              <view class='r bold letter-sp2' style='color:{{idolTheme[idol_index].main}};box-shadow:0 0 0 1px  {{idolTheme[idol_index].main}} inset'>{{idolInfo[idol_index].birthdaty}}</view>
+                        </view>
+                        <view class='item'>
+                              <view class='l text-white' style='background:{{idolTheme[idol_index].main}}'>年龄</view>
+                              <view class='r bold letter-sp2' style='color:{{idolTheme[idol_index].main}};box-shadow:0 0 0 1px  {{idolTheme[idol_index].main}} inset'>{{idolInfo[idol_index].age}}</view>
+                        </view>
+                        <view class='item'>
+                              <view class='l text-white' style='background:{{idolTheme[idol_index].main}}'>代表花</view>
+                              <view class='r bold ' style='color:{{idolTheme[idol_index].main}} ;box-shadow:0 0 0 1px  {{idolTheme[idol_index].main}} inset'>{{idolInfo[idol_index].flower}}</view>
+                        </view>
+                  </view>
+            <view class='sub-desc text-xs letter-sp1 bold'>{{idolInfo[idol_index].sub_desc}}</view>
+            </view>
+      </view>
+
+      <!--动态-->
+      <contentSwiper wx:if="{{tabCurrent==1}}" bind:childEvent='catchChildSwiper' indicatorArr="{{indicatorArr}}" color="{{idolTheme[idol_index].main}}">
+            <list slot="recommend" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" loading="{{loading}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+            <list slot="live" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+            <list slot="comic" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+            <list slot="pv" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+            <list slot="mv" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+            <list slot="shortVideo" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+            <list slot="news" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+      </contentSwiper>
+
+</view>
+
+<!--后援会-->

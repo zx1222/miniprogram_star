@@ -3,6 +3,6 @@
       "usingComponents": {
             "tabbar-bottom": "../../../components/tabbar_bottom/tabbar_bottom",
             "contentSwiper": "./components/content-swiper/content-swiper",
-            "list": "./components/list/list"
+            "list": "../../components/list/list"
       }
 }

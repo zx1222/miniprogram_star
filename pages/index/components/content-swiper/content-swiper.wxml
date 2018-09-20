@@ -7,6 +7,10 @@
 </view>
 
 <swiper bindchange="_swipreChange" indicator-dots="{{false}}" class="content-swiper" current="{{swiperCurrent}}">
+
+<!-- <swiper-item class="swiper-item" wx:for="{{indicatorArr}}">  <view>{{indicatorArr}}</view> 
+            <slot></slot>
+      </swiper-item> -->
       <swiper-item class="swiper-item">
             <slot name="recommend"></slot>
       </swiper-item>

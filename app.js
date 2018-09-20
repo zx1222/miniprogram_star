@@ -18,6 +18,7 @@ App({
 
             // 歌姬颜色列表
             // 1 卡缇娅 2 罗兹 3 清歌 4 伊莎贝拉 5 玉藻
+            idol_index:0,
             idolTheme: [{
                         main: '#9b86bd',
                         sub: '#f0d3e4'

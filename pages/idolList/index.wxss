@@ -62,7 +62,7 @@ tabbar-bottom {
 .item .btn {
       position: absolute;
       top: 0rpx;
-      right: 36rpx;
+      right: 14rpx;
       width: 118rpx;
       height: 48rpx;
       border-radius: 4rpx;

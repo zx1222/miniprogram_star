@@ -9,18 +9,21 @@ Page({
        * 页面的初始数据
        */
       data: {
-            gender:1,
+            gender: 1,
             tab_id: 1,
-            idol_index:2,
+            idol_index: 2,
             idolTheme: [],
             list: [{
+                        index: 0,
                         avatar: '../../images/idol-avatar1.png',
                         fans: 100,
                         name: '卡缇娅',
                         desc: '除了祖国的命令，\n只有游戏才能让她动起来的萝莉',
-                        is_follow:2
+                        is_follow: 2,
+                  name: '卡缇娅·乌拉诺娃',
                   },
                   {
+                        index: 1,
                         avatar: '../../images/idol-avatar2.png',
                         fans: 100,
                         name: '罗兹',
@@ -28,6 +31,7 @@ Page({
                         is_follow: 2
                   },
                   {
+                        index: 2,
                         avatar: '../../images/idol-avatar3.png',
                         fans: 100,
                         name: '清歌',
@@ -35,6 +39,7 @@ Page({
                         is_follow: 2
                   },
                   {
+                        index: 3,
                         avatar: '../../images/idol-avatar4.png',
                         fans: 100,
                         name: '伊莎贝拉',
@@ -42,6 +47,7 @@ Page({
                         is_follow: 1
                   },
                   {
+                        index: 4,
                         avatar: '../../images/idol-avatar5.png',
                         fans: 100,
                         name: '玉藻',
@@ -49,10 +55,10 @@ Page({
                         is_follow: 1
                   }
             ],
-            is_show:false,
-            toast_title:'浏览视频成功',
+            is_show: false,
+            toast_title: '浏览视频成功',
             toast_content: '你为清歌增加了10点人气值',
-            is_toast_show:true
+            is_toast_show: true
       },
 
       /**
@@ -64,7 +70,7 @@ Page({
                   genderTheme: app.globalData.genderTheme,
                   idolTheme: app.globalData.idolTheme
             })
-            if(this.data.gender==1){
+            if (this.data.gender == 1) {
                   wx.setNavigationBarColor({
                         frontColor: '#ffffff',
                         backgroundColor: this.data.genderTheme[0].main,
@@ -72,7 +78,7 @@ Page({
                               duration: 400,
                               timingFunc: 'easeIn'
                         }
-                    
+
                   })
             }
             if (this.data.gender == 2) {
@@ -129,28 +135,35 @@ Page({
       onReachBottom: function() {
 
       },
-      follow:function(e){
+      follow: function(e) {
             console.log(e.currentTarget.dataset.id)
             this.setData({
                   idol_index: e.currentTarget.dataset.id,
                   is_show: true
             })
       },
-      turnToSupport:function(){
+      turnToSupport: function() {
 
       },
-      closePopup:function(){
+      turnToView: function(e) {
+            const index = e.currentTarget.dataset.index
+            wx.navigateTo({
+                  url: `/pages/idolView/index?index=${index}`,
+            })
+            app.globalData.idol_index = index
+      },
+      closePopup: function() {
             this.setData({
-                  is_show:false
+                  is_show: false
             })
       },
-      catchCancel: function (e) {
+      catchCancel: function(e) {
             console.log(e)
             this.setData({
-                  is_toast_show:false
+                  is_toast_show: false
             })
       },
-      catchConfirm:function(e){
+      catchConfirm: function(e) {
             console.log(e)
       },
 

@@ -10,41 +10,32 @@ import {
 
 Page({
       data: {
+            // 区别首页及歌姬详情页list标识 1 首页 2详情
+            p_swiper:1,
+            indicatorArr: ['推荐', '直播', '动画', 'PV', 'MV', '短视频', '事件'],
             resultData: {},
             tab_top_id: 0,
             tab_bottom_id:0,
             list: [{
-                        poster: '../../../../images/video-poster-default.png',
+                        poster: '../../images/video-poster-default.png',
                         title: '卡缇娅视频',
                         tag: '直播',
                         date: 1537088018
                   },
                   {
-                        poster: '../../../../images/video-poster-default.png',
+                        poster: '../../images/video-poster-default.png',
                         title: '卡缇娅视频',
                         tag: '直播',
                         date: 1537088018
                   },
                   {
-                        poster: '../../../../images/video-poster-default.png',
+                        poster: '../../images/video-poster-default.png',
                         title: '卡缇娅视频',
                         tag: '直播',
                         date: 1537088018
                   },
                   {
-                        poster: '../../../../images/video-poster-default.png',
-                        title: '卡缇娅视频',
-                        tag: '直播',
-                        date: 1537088018
-                  },
-                  {
-                        poster: '../../../../images/video-poster-default.png',
-                        title: '卡缇娅视频',
-                        tag: '直播',
-                        date: 1537088018
-                  },
-                  {
-                        poster: '../../../../images/video-poster-default.png',
+                        poster: '../../images/video-poster-default.png',
                         title: '卡缇娅视频',
                         tag: '直播',
                         date: 1537088018
@@ -88,12 +79,12 @@ Page({
             this.setData({
                   tab_top_id: e.detail
             })
+            console.log(this.data.tab_top_id)
             if (this.data.tab_top_id == 0) {
                   this.setData({
                         resultData: {
-                              banners: ['../../../../images/banner.jpg',
-                                    '../../../../images/banner.jpg',
-                                    '../../../../images/banner.jpg',
+                              banners: ['../../images/banner.jpg',
+                                    '../../images/banner.jpg',
                               ]
                         }
                   })
@@ -101,9 +92,8 @@ Page({
             if (this.data.tab_top_id == 1) {
                   this.setData({
                         resultData: {
-                              banners: ['../../../../images/banner.jpg',
-                                    '../../../../images/banner.jpg',
-                                    '../../../../images/banner.jpg',
+                              banners: ['../../mages/banner.jpg',
+                                    '../../images/banner.jpg',
                               ]
                         }
                   })
@@ -111,7 +101,7 @@ Page({
 
             if (this.data.tab_top_id == 6) {
                   const data = [{
-                        poster: '../../../../images/video-poster-default.png',
+                        poster: '../../images/video-poster-default.png',
                         title: '卡缇娅视频',
                         comment_count: 77,
                         date: 1537088018
@@ -119,15 +109,16 @@ Page({
                   this.setData({
                         list: this.formatlist2(data)
                   })
+                  console.log(this.data.list)
             }
       },
       getData: function() {
             if (this.data.tab_top_id == 0) {
                   this.setData({
                         resultData: {
-                              banners: ['../../../../images/banner.jpg',
-                                    '../../../../images/banner.jpg',
-                                    '../../../../images/banner.jpg',
+                              banners: ['../../images/banner.jpg',
+                                    '../../images/banner.jpg',
+                                    '../../images/banner.jpg',
                               ]
                         }
                   })
@@ -184,13 +175,13 @@ Page({
                         loading: true
                   })
                   const resData = [{
-                              poster: '../../../../images/video-poster-default.png',
+                              poster: '../../images/video-poster-default.png',
                               title: '卡缇娅视频',
                               tag: '直播',
                               date: 1537088018
                         },
                         {
-                              poster: '../../../../images/video-poster-default.png',
+                              poster: '../../images/video-poster-default.png',
                               title: '卡缇娅视频',
                               tag: '直播',
                               date: 1537088018

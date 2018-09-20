@@ -1,6 +1,6 @@
 <view class="container text-black ">
-      <view class='idol-list flex  flex-c justify-content-between'>
-            <view class=' w100 item ' wx:for="{{list}}" wx:key="{{index}}">
+      <view class='idol-list flex  flex-c justify-content-between' >
+            <view class=' w100 item ' wx:for="{{list}}" wx:key="{{index}}" bindtap='turnToView' data-index="{{item.index}}">
                   <image wx:if="{{index==0}}" src='../../images/idol-list-border1.png' class='border'></image>
                   <image wx:if="{{index==1}}" src='../../images/idol-list-border2.png' class='border'></image>
                   <image wx:if="{{index==2}}" src='../../images/idol-list-border3.png' class='border'></image>
@@ -17,14 +17,14 @@
                                     <view class='idol-name text-m bold letter-sp2' style="color:{{idolTheme[index].main}}">{{item.name}}</view>
                                     <view class='idol-fans'>
                                           <text class='text-xs bold'>粉丝数量:</text>
-                                          <text class='fans-count letter-sp1' style="color:{{idolTheme[index].main}}">{{item.fans}}</text>
+                                          <text class='fans-count letter-sp1 bold italic' style="color:{{idolTheme[index].main}}">{{item.fans}}</text>
                                     </view>
                               </view>
 
                               <view class='idol-desc'>
                                     <text>{{item.desc}}</text>
                               </view>
-                              <button wx:if="{{item.is_follow==2}}" class="btn-follow btn text-white" style="background:{{idolTheme[index].main}}" bindtap='follow' data-id="{{index}}">关注</button>
+                              <button wx:if="{{item.is_follow==2}}" class="btn-follow btn text-white" style="background:{{idolTheme[index].main}}" catchtap='follow' data-id="{{index}}">关注</button>
                               <button wx:if="{{item.is_follow==1}}" class="btn-follow-yet btn text-white" style="border:1px solid {{idolTheme[index].main}};color:{{idolTheme[index].main}}" data-id="{{index}}">已关注</button>
                         </view>
                   </view>
@@ -33,6 +33,7 @@
 
       <tabbar-bottom class="w100" tab_id="{{tab_id}}"></tabbar-bottom>
 
+<!-- 关注成功popup -->
       <view class="popup flex align-items-center justify-content-center" wx:if="{{is_show}}">
             <view class='poster text-white'>
                   <view class='poster-inner flex flex-c justify-content-between' style="background:{{idolTheme[idol_index].main}}">
