@@ -28,3 +28,7 @@
 .fa-ellipsis-v:before {
   content: "\f142";
 }
+
+.fa-search:before {
+  content: "\f002";
+}

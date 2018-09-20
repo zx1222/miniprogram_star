@@ -1,8 +1,7 @@
 {
       "pages": [
-      "pages/idolList/index",
             "pages/index/index",
-          
+            "pages/idolList/index",
             "pages/home/index",
             "pages/videoVIew/index",
             "pages/replyComment/index",

@@ -41,7 +41,7 @@ Component({
                         });
                         // 传值给父组件
                         const data = this.data.swiperCurrent
-                        this.triggerEvent('childEvent', data, {
+                        this.triggerEvent('swiperChange', data, {
                               bubbles: false
                         });
                   }

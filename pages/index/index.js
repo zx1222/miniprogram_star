@@ -10,6 +10,7 @@ import {
 
 Page({
       data: {
+            genderTheme:{},
             // 区别首页及歌姬详情页list标识 1 首页 2详情
             p_swiper:1,
             indicatorArr: ['推荐', '直播', '动画', 'PV', 'MV', '短视频', '事件'],
@@ -56,8 +57,19 @@ Page({
       onLoad: function(options) {
             this.getData();
             this.setData({
+                  gender:app.globalData.gender,
                   list: this.formatlist1(this.data.list)
             })
+            if(this.data.gender==1){
+                  this.setData({
+                        genderTheme: app.globalData.genderTheme[0]
+                  })
+            }
+            if (this.data.gender == 2) {
+                  this.setData({
+                        genderTheme: app.globalData.genderTheme[1]
+                  })
+            }
       },
       onShow: function() {
             // 查询用户是否授权
@@ -111,6 +123,12 @@ Page({
                   })
                   console.log(this.data.list)
             }
+      },
+      search: function (e) {
+            this.setData({
+                  searchQuery: e.detail
+            })
+            console.log(this.data.searchQuery)
       },
       getData: function() {
             if (this.data.tab_top_id == 0) {

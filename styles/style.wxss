@@ -23,9 +23,11 @@ image {
 .bold {
       font-weight: bold;
 }
-.italic{
-      font-style:italic;
+
+.italic {
+      font-style: italic;
 }
+
 /* flex start*/
 
 .flex {
@@ -52,14 +54,17 @@ image {
 .justify-content-center {
       justify-content: center;
 }
-.justify-content-end{
-      justify-content: flex-end
+
+.justify-content-end {
+      justify-content: flex-end;
 }
 
 /* bg */
-.bg-light-gray{
+
+.bg-light-gray {
       background: #f7f7f7;
 }
+
 /* bg end*/
 
 /* flex end*/
@@ -85,13 +90,14 @@ image {
 .text-white {
       color: #fff;
 }
-.text-black{
-      color: #000000;
-}
-.text-blue{
-      color: #2d63a0;
+
+.text-black {
+      color: #000;
 }
 
+.text-blue {
+      color: #2d63a0;
+}
 
 /* text color end*/
 
@@ -153,12 +159,12 @@ image {
 
 /* 文本限制 end */
 
-.popup{
+.popup {
       width: 100%;
       height: 100%;
-      top:0;
+      top: 0;
       left: 0;
-      background: rgba(60,60,60,.7);
+      background: rgba(60, 60, 60, 0.7);
       position: absolute;
       animation: bounceIn 0.8s ease 1;
       -webkit-animation: bounceIn 0.8s ease 1;
@@ -197,5 +203,17 @@ image {
       to {
             opacity: 1;
             transform: scale3d(1, 1, 1);
+      }
+}
+
+@keyframes fadeInLeft {
+      from {
+            transform: translate3d(-100%, 0, 0);
+            opacity: 0;
+      }
+
+      to {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
       }
 }
