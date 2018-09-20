@@ -1,5 +1,5 @@
-<view class="searchForm" style='background:{{bg.main}}'>
-      <view class='avatar'>
+<view class="searchForm" style='background:{{bg.sub}}'>
+      <view class='avatar' style='box-shadow:0 0 0 1px {{bg.main}}'>
             <open-data type="userAvatarUrl"></open-data>
       </view>
       <view class='input-wrp'>

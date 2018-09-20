@@ -32,3 +32,6 @@
 .fa-search:before {
   content: "\f002";
 }
+.fa-plus-circle:before {
+  content: "\f055";
+}

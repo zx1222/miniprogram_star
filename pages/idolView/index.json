@@ -3,6 +3,7 @@
       "component": true,
       "usingComponents": {
             "contentSwiper": "./components/content-swiper/content-swiper",
-            "list": "../../components/list/list"
+            "list": "../../components/list/list",
+            "forum-p-list": "../../components/forum_p_list/forum_p_list"
       }
 }

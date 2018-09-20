@@ -49,12 +49,10 @@
 }
 
 .comment-wrp .content .hd .icon {
-      /* width: 24rpx; */
       padding-right: 6rpx;
 }
 
 .comment-wrp .content .hd .icon-like, .comment-wrp .content .hd .icon-report {
-      /* width: 28rpx; */
 }
 
 .comment-wrp .content .child-comment-tips {

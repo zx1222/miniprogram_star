@@ -1,19 +1,17 @@
 {
       "pages": [
-      "pages/index/index",
             "pages/idolList/index",
-        
+            "pages/index/index",
             "pages/videoVIew/index",
             "pages/home/index",
-      "pages/newsView/index",
+            "pages/newsView/index",
             "pages/replyComment/index",
-         
             "pages/idolView/index"
       ],
       "window": {
             "backgroundTextStyle": "#333333",
             "navigationStyle": "default",
-            "navigationBarBackgroundColor": "#f75c7a",
+            "navigationBarBackgroundColor": "#f4a9b8",
             "navigationBarTextStyle": "white",
             "navigationBarTitleText": "歌姬动态",
             "enablePullDownRefresh": true

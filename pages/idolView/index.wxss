@@ -1,5 +1,3 @@
-/* pages/user/component/topic-swiper/topic-swiper.wxss */
-
 .container {
       height: 100%;
 }
@@ -57,7 +55,7 @@
       height: calc(100% - 60rpx);
 }
 
-.idol-intro .header {
+.idol-intro .header, .fnasClub .header {
       margin: 0 40rpx;
       padding: 40rpx 0;
 }
@@ -296,6 +294,7 @@
 }
 
 /* 关注成功popup */
+
 .poster {
       width: 91.6%;
       height: 90%;
@@ -357,4 +356,105 @@
       top: 2%;
       right: 4%;
       width: 32rpx;
+}
+
+/* 应援规则 */
+
+.support-rules .poster-inner {
+      box-sizing: border-box;
+      background: #fff;
+      font-family: 'FZLTCHJT';
+      color: #000;
+}
+
+.support-rules .poster-inner view {
+      line-height: 1.6;
+}
+
+.support-rules .poster-inner .header {
+      padding-bottom: 20rpx;
+}
+
+.support-rules .poster-inner .title {
+      font-size: 36rpx;
+      letter-spacing: 4px;
+      padding-bottom: 14rpx;
+}
+
+.support-rules .poster-inner .content .content_title {
+      width: 52%;
+      border: 1px solid #000;
+      text-align: center;
+      margin: 30rpx 24%;
+}
+
+.support-rules .poster-inner .content .section {
+      padding-bottom: 36rpx;
+}
+
+/* 帖子列表 */
+
+.forum-list-wrp {
+      padding-bottom: 86rpx;
+}
+
+.fnasClub .btn-add {
+      color: #919191;
+      font-size: 70rpx;
+      position: absolute;
+      bottom: 36rpx;
+      left: calc(50% - 35rpx);
+}
+
+/* 发布类型弹窗 */
+
+@keyframes bounce1 {
+      from {
+            transform: translate3d(70%, 200%, 0);
+            opacity: 0;
+      }
+
+      to {
+            transform: translate3d(0%, 0%, 0);
+            opacity: 1;
+      }
+}
+
+@keyframes bounce2 {
+      from {
+            transform: translate3d(-70%, 200%, 0);
+            opacity: 0;
+      }
+
+      to {
+            transform: translate3d(0%, 0%, 0);
+            opacity: 1;
+      }
+}
+
+.popup.post-type .btn-wrp {
+      width: 128rpx;
+      margin: 0 94rpx;
+      text-align: center;
+      opacity: 0;
+}
+
+.popup.post-type .btn-wrp:first-child {
+      animation: bounce1 0.2s 0.1s linear 1;
+      animation-fill-mode: forwards;
+}
+
+.popup.post-type .btn-wrp:last-child {
+      animation: bounce2 0.2s 0.3s linear 1;
+         animation-fill-mode: forwards;
+}
+
+.popup.post-type .icon {
+      width: 128rpx;
+}
+
+.popup.post-type .label {
+      font-size: 36rpx;
+      padding-top: 36rpx;
+      letter-spacing: 2px;
 }

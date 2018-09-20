@@ -4,7 +4,8 @@ import {
       wxRequest
 } from '../../utils/promise.js'
 import {
-      formatDate1, formatDate2
+      formatDate1,
+      formatDate2
 } from '../../utils/formatDate.js'
 Page({
 
@@ -134,6 +135,34 @@ Page({
                         date: 1537088018
                   }
             ],
+
+            // 后援会
+            // 规则 显示与否
+            is_rules_show: true,
+            forum_list: [{
+                        id: 1,
+                        user_avatar: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537173935576&di=1a4d9cfa47850ba062b0e622f9bd5d75&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201607%2F13%2F20160713114847_KcAJz.jpeg',
+                        user_name: '小丸子',
+                        content: '啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦!!!',
+                        like_count: 100,
+                        comment_count: 20,
+                        create_time: '25天前',
+                        cover: '../../images/video-poster-default.png'
+                  },
+                  {
+                        id: 1,
+                        user_avatar: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537173935576&di=1a4d9cfa47850ba062b0e622f9bd5d75&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201607%2F13%2F20160713114847_KcAJz.jpeg',
+                        user_name: '小丸子',
+                        content: '啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦!!!',
+                        like_count: 100,
+                        comment_count: 20,
+                        create_time: '25天前',
+                        cover: '../../images/video-poster-default.png'
+                  },
+            ],
+            // 发布类型与否
+            is_post_show: false,
+
       },
 
       /**
@@ -190,12 +219,12 @@ Page({
       /**
        * 页面相关事件处理函数--监听用户下拉动作
        */
-//       onPullDownRefresh: function() {
-//             console.log(this.data.tabCurrent)
-// if(this.data.tabCurrent!=1){
-//       wx.stopPullDownRefresh()
-// }
-//       },
+      //       onPullDownRefresh: function() {
+      //             console.log(this.data.tabCurrent)
+      // if(this.data.tabCurrent!=1){
+      //       wx.stopPullDownRefresh()
+      // }
+      //       },
 
       /**
        * 页面上拉触底事件的处理函数
@@ -203,7 +232,7 @@ Page({
       onReachBottom: function() {
 
       },
-      getDataList: function () {
+      getDataList: function() {
             if (this.data.tab_top_id == 0) {
                   this.setData({
                         resultData: {
@@ -265,14 +294,14 @@ Page({
                   console.log(this.data.list)
             }
       },
-      formatlist1: function (list) {
+      formatlist1: function(list) {
             const data = list
             data.forEach((item) => {
                   item.date = formatDate1(item.date)
             })
             return data
       },
-      formatlist2: function (list) {
+      formatlist2: function(list) {
             const data = list
             data.forEach((item) => {
                   item.date = formatDate2(item.date)
@@ -294,12 +323,20 @@ Page({
       },
       closePopup: function() {
             this.setData({
-                  is_show: false
+                  is_show: false,
+                  is_rules_show: false,
+                  is_post_show: false
             })
       },
       turnToSupport: function() {
             this.setData({
                   tabCurrent: 2
+            })
+      },
+      // 选择发布类型
+      choosePostType: function() {
+            this.setData({
+                  is_post_show: true
             })
       },
 
