@@ -1,5 +1,6 @@
 {
       "pages": [
+            "pages/genderTheme/index",
             "pages/idolList/index",
             "pages/index/index",
             "pages/videoVIew/index",

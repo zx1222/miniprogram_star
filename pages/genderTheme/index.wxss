@@ -1,0 +1,17 @@
+.container {
+      width: 100%;
+      height: 100%;
+}
+
+.select-box-female {
+      width: 630rpx;
+      height: 875rpx;
+      background: url('http://192.168.0.189/20180507/star_project/web/star_img/gender-female-border.png');
+      background-size: 100% 100%;
+}
+.select-box-male {
+      width: 630rpx;
+      height: 875rpx;
+      background: url('http://192.168.0.189/20180507/star_project/web/star_img/gender-male-border.png');
+      background-size: 100% 100%;
+}

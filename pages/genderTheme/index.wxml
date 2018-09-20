@@ -1,0 +1,10 @@
+<view class="container flex  align-item-center justify-content-center">
+      <view wx:if="{{gender==1}}" class='select-box-male'>
+            <image src='../../images/icon-male-select.png' mode='widthFix' class='icon male'></image>
+            <image src='../../images/icon-female.png' mode='widthFix' class='icon female' bindtap='selectTheme' data-id='1'></image>
+      </view>
+      <view wx:if="{{gender==2}}" class='select-box-female'>
+            <image src='../../images/icon-male.png' mode='widthFix' class='icon male' bindtap='selectTheme'></image>
+            <image src='../../images/icon-female-select.png' mode='widthFix' class='icon female' data-id='2'></image>
+      </view>
+</view>
