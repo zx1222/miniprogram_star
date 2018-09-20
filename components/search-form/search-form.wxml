@@ -5,7 +5,7 @@
       <view class='input-wrp'>
             <view class='l' style='border-right:1px solid {{bg.main}}'><text class="fa fa-search" aria-hidden="true" style='color:{{bg.main}}'></text></view>
             <view class='r'>
-            <input type="text" placeholder='战斗吧歌姬' placeholder-style='color:{{bg.sub}}' confirm-type="search" bindconfirm="submit" bindinput='bindKeyInput' style='color:{{bg.main}}'></input></view>
+            <input type="text" placeholder='战斗吧歌姬' placeholder-style='color:{{bg.main}}' confirm-type="search" bindconfirm="submit" bindinput='bindKeyInput' style='color:{{bg.main}}'></input></view>
       </view>
       <view class='btn-submit' catchtap='submit'>搜索</view>
 </view>

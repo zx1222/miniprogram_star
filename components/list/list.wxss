@@ -1,7 +1,12 @@
 @import '../../styles/fontawsome.wxss';
+@import '../../styles/icon.wxss';
+.text-xs{
+      font-size: 22rpx;
+}
 .swiper .list-wrp {
       font-family: 'FZZCHJT';
 }
+
 
 .w100 {
       width: 100%;
@@ -207,10 +212,14 @@
 }
 
 .list-wrp-video .video-info .tag {
-      font-size: 22rpx;
+      font-size: 18rpx;
       border: 1px solid #e95471;
-      padding: 0rpx 7rpx;
+      padding: 0rpx 7rpx 2rpx 7rpx;
       margin-right: 10rpx;
+}
+.list-wrp-video .date{
+      font-size: 20rpx;
+      font-weight: bold;
 }
 
 .row {
@@ -221,7 +230,16 @@
 }
 
 /* 文章列表 */
-
+.list-wrp-news .item{
+      padding: 20rpx 0;
+         border-bottom: 1px solid #9e9e9e;
+}
+.list-wrp-news .item:first-child{
+      padding-top: 0;
+}
+.list-wrp-news .item:last-child{
+   border: none;
+}
 .list-wrp-news .news-info {
       width: 57%;
       margin-right: 5%;
@@ -240,8 +258,8 @@
       letter-spacing: 1px;
 }
 
-.list-wrp-news .news-info .icon-comment {
-      width: 26rpx;
+.list-wrp-news .news-info .icon-message {
+      font-size: 25rpx;
       margin-right: 8rpx;
 }
 

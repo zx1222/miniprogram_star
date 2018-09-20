@@ -24,6 +24,10 @@ Component({
             p_swiper:{
                   type:'number',
                   value:1
+            },
+            idolTheme:{
+                  type:'Object',
+                  value:{}
             }
       },
 

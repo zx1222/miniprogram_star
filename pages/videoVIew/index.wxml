@@ -14,21 +14,20 @@
                         <input class="{{is_focus?'cover':''}}" placeholder="我也说一句..." placeholder-class='placeholder bold letter-sp1' bindfocus="focusChange" bindblur='blurChange' focus="{{false}}" />
                   </view>
 
-                  <!-- <view class='btn-comment'>我也说一句...</view> -->
                   <view class="{{is_focus?'hidden':''}}  count-wrp flex  align-items-center justify-content-end  text-xs">
                         <view class='item-count flex align-items-center justify-content-end'>
-                              <image src='../../images/icon-comment.png' class='icon icon-comment' mode='widthFix'></image>
+                              <text class='icon-message icomoon  icon'></text>
                               <text class='count'>{{item.comment_count}}</text>
                         </view>
                         <view class='item-count flex align-items-center'>
-                              <image src='../../images/icon-like.png' class='icon icon-like' mode='widthFix'></image>
+                              <text class=' icon-good-light icomoon  icon'></text>
                               <text class='count'>{{item.like_count}}</text>
                         </view>
                         <view class='item-count flex align-items-center'>
-                              <image src='../../images/icon-forward.png' class='icon icon-forward' mode='widthFix'></image>
+                              <text class='icon-intransit icomoon  icon'></text>
                         </view>
                         <view class='item-count flex align-items-center'>
-                              <image src='../../images/icon-start.png' class='icon icon-start' mode='widthFix'></image>
+                              <text class='icon-star icomoon  icon'></text>
                         </view>
                   </view>
             </view>

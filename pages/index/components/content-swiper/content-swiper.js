@@ -30,7 +30,7 @@ Component({
                         'swiperCurrent': e.target.dataset.index
                   });
                   const data = this.data.swiperCurrent
-                  this.triggerEvent('childEvent', data, {
+                  this.triggerEvent('swiperChange', data, {
                         bubbles: false
                   });
             },

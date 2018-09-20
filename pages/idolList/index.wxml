@@ -14,9 +14,9 @@
                         </view>
                         <view class='idol-info flex flex-c justify-content-between'>
                               <view>
-                                    <view class='idol-name text-m bold letter-sp2' style="color:{{idolTheme[index].main}}">{{item.name}}</view>
+                                    <view class='idol-name text-m bold letter-sp2' style="color:{{idolTheme[index].main}}"><text class='icon-arrow-right icon-right text-xs' style='color:{{idolTheme[index].main}}'></text>{{item.name}}</view>
                                     <view class='idol-fans'>
-                                          <text class='text-xs bold'>粉丝数量:</text>
+                                          <text class='text-s bold'>粉丝数量:</text>
                                           <text class='fans-count letter-sp1 bold italic' style="color:{{idolTheme[index].main}}">{{item.fans}}</text>
                                     </view>
                               </view>

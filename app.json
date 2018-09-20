@@ -1,11 +1,13 @@
 {
       "pages": [
-            "pages/index/index",
+      "pages/index/index",
             "pages/idolList/index",
-            "pages/home/index",
+        
             "pages/videoVIew/index",
+            "pages/home/index",
+      "pages/newsView/index",
             "pages/replyComment/index",
-            "pages/newsView/index",
+         
             "pages/idolView/index"
       ],
       "window": {

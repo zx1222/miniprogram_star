@@ -104,7 +104,7 @@ Page({
             if (this.data.tab_top_id == 1) {
                   this.setData({
                         resultData: {
-                              banners: ['../../mages/banner.jpg',
+                              banners: ['../../images/banner.jpg',
                                     '../../images/banner.jpg',
                               ]
                         }
@@ -206,9 +206,9 @@ Page({
                         },
                   ]
 
-                  newVoteList = this.formatlist1(resData)
+                  newList = this.formatlist1(resData)
                   this.setData({
-                        list: this.data.list.concat(newVoteList),
+                        list: this.data.list.concat(newList),
                         loading: false
                   })
                   // http.request(url, data).then((res) => {

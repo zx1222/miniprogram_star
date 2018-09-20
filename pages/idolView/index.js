@@ -3,6 +3,9 @@ const app = getApp()
 import {
       wxRequest
 } from '../../utils/promise.js'
+import {
+      formatDate1, formatDate2
+} from '../../utils/formatDate.js'
 Page({
 
       /**
@@ -11,20 +14,23 @@ Page({
       data: {
             tabArr: ['自我介绍', '动态', '后援会'],
             tabCurrent: 0,
+            // 动态tab
             indicatorArr: ['直播', '动画', 'PV', 'MV', '短视频', '事件'],
-            swiperCurrent:0,
+            swiperCurrent: 0,
+            // 判断是首页还是歌姬详情
             p_swiper: 2,
 
+            // 关注成功popup显示
+            is_show: false,
             idolTheme: [],
             idol_index: 0,
-            idolInfo:[
-                  {
-                        hd_desc:'除了祖国的命令，只有游戏才能让她动起来的萝莉',
-                        fans:100,
-                        hot:400,
-                        rank:1,
-                        is_follow:1,
-                        image:'../../images/idol1.png',
+            idolInfo: [{
+                        hd_desc: '除了祖国的命令，只有游戏才能让她动起来的萝莉',
+                        fans: 100,
+                        hot: 400,
+                        rank: 1,
+                        is_follow: 2,
+                        image: '../../images/idol1.png',
                         bg: 'http://192.168.0.189/20180507/star_project/web/star_img/idol-brief-inro_bg1.png',
                         country: '../../images/idol-country1.png',
                         name: '卡缇娅·乌拉诺娃',
@@ -32,7 +38,7 @@ Page({
                         birthdaty: '6月6日',
                         age: '14',
                         flower: '晚香玉',
-                        sub_desc:'外表激萌小女孩，内心痴汉偶像宅；平时三无没干劲，肝起游戏来不要命。'
+                        sub_desc: '外表激萌小女孩，内心痴汉偶像宅；平时三无没干劲，肝起游戏来不要命。'
                   },
                   {
                         hd_desc: '认真努力的摇滚少女',
@@ -48,7 +54,7 @@ Page({
                         birthdaty: '4月16日',
                         age: '16',
                         flower: '玫瑰',
-                        sub_desc:'敢想敢做的摇滚女孩，正直的她总承担着吐槽团队中其他人奇怪行为的责任。'
+                        sub_desc: '敢想敢做的摇滚女孩，正直的她总承担着吐槽团队中其他人奇怪行为的责任。'
                   },
                   {
                         hd_desc: '神秘优雅的大家闺秀',
@@ -58,26 +64,26 @@ Page({
                         is_follow: 2,
                         image: '../../images/idol3.png',
                         bg: 'http://192.168.0.189/20180507/star_project/web/star_img/idol-brief-inro_bg3.png',
-                        country:'../../images/idol-country3.png',
+                        country: '../../images/idol-country3.png',
                         name: '李清歌',
-                        short_name:'清歌',
+                        short_name: '清歌',
                         birthdaty: '12月22日',
                         age: '15',
                         flower: '茉莉',
-                        sub_desc:'端庄优雅的大家闺秀，平时总给人一种雾里看花的感觉，但到关键时刻却能以坚定的信念带领着大家前进。'
+                        sub_desc: '端庄优雅的大家闺秀，平时总给人一种雾里看花的感觉，但到关键时刻却能以坚定的信念带领着大家前进。'
                   },
                   {
                         hd_desc: '青春活泼的超级乐天派',
                         fans: 100,
                         hot: 400,
                         rank: 1,
-                        is_follow: 1,
+                        is_follow: 2,
                         image: '../../images/idol4.png',
                         bg: 'http://192.168.0.189/20180507/star_project/web/star_img/idol-brief-inro_bg4.png',
                         country: '../../images/idol-country4.png',
                         name: '伊莎贝拉·霍利',
                         short_name: '伊莎贝拉',
-                        birthdaty:'7月17',
+                        birthdaty: '7月17',
                         age: '16',
                         flower: '向日葵',
                         sub_desc: '活泼可爱的美国女孩，平时虽然大大咧咧，但却非常会照顾人，跟她在一起总有种安心的感觉。'
@@ -87,7 +93,7 @@ Page({
                         fans: 100,
                         hot: 400,
                         rank: 1,
-                        is_follow: 1,
+                        is_follow: 2,
                         image: '../../images/idol5.png',
                         bg: 'http://192.168.0.189/20180507/star_project/web/star_img/idol-brief-inro_bg5.png',
                         country: '../../images/idol-country5.png',
@@ -95,10 +101,39 @@ Page({
                         short_name: '玉藻',
                         birthdaty: '11月11日',
                         age: '15',
-                        flower:'樱花',
+                        flower: '樱花',
                         sub_desc: '自称是狐神转世的妹子，外表看起来端庄乖巧，但不知道为啥一开口就让人有一种“这是中二病吧？”的感觉。'
                   }
-            ]
+            ],
+
+            // 动态变量
+            resultData: {},
+            tab_top_id: 0,
+            list: [{
+                        poster: '../../images/video-poster-default.png',
+                        title: '卡缇娅视频',
+                        tag: '直播',
+                        date: 1537088018
+                  },
+                  {
+                        poster: '../../images/video-poster-default.png',
+                        title: '卡缇娅视频',
+                        tag: '直播',
+                        date: 1537088018
+                  },
+                  {
+                        poster: '../../images/video-poster-default.png',
+                        title: '卡缇娅视频',
+                        tag: '直播',
+                        date: 1537088018
+                  },
+                  {
+                        poster: '../../images/video-poster-default.png',
+                        title: '卡缇娅视频',
+                        tag: '直播',
+                        date: 1537088018
+                  }
+            ],
       },
 
       /**
@@ -108,7 +143,8 @@ Page({
             console.log(options)
             this.setData({
                   idol_index: options.index,
-                  idolTheme: app.globalData.idolTheme
+                  idolTheme: app.globalData.idolTheme,
+                  list: this.formatlist1(this.data.list)
             })
             wx.setNavigationBarTitle({
                   title: this.data.idolInfo[this.data.idol_index].name,
@@ -154,9 +190,12 @@ Page({
       /**
        * 页面相关事件处理函数--监听用户下拉动作
        */
-      onPullDownRefresh: function() {
-
-      },
+//       onPullDownRefresh: function() {
+//             console.log(this.data.tabCurrent)
+// if(this.data.tabCurrent!=1){
+//       wx.stopPullDownRefresh()
+// }
+//       },
 
       /**
        * 页面上拉触底事件的处理函数
@@ -164,7 +203,20 @@ Page({
       onReachBottom: function() {
 
       },
-      _tapIndicator(e) {
+      getDataList: function () {
+            if (this.data.tab_top_id == 0) {
+                  this.setData({
+                        resultData: {
+                              banners: [
+                                    '../../images/banner.jpg',
+                                    '../../images/banner.jpg',
+                                    '../../images/banner.jpg',
+                              ]
+                        }
+                  })
+            }
+      },
+      tapIndicator(e) {
             this.setData({
                   'tabCurrent': e.target.dataset.index
             });
@@ -172,8 +224,9 @@ Page({
             this.triggerEvent('childEvent', data, {
                   bubbles: false
             });
+            this.getDataList();
       },
-      catchChildSwiper: function (e) {
+      catchChildSwiper: function(e) {
             this.setData({
                   tab_top_id: e.detail
             })
@@ -183,6 +236,7 @@ Page({
                         resultData: {
                               banners: ['../../images/banner.jpg',
                                     '../../images/banner.jpg',
+                                    '../../images/banner.jpg',
                               ]
                         }
                   })
@@ -190,7 +244,8 @@ Page({
             if (this.data.tab_top_id == 1) {
                   this.setData({
                         resultData: {
-                              banners: ['../../mages/banner.jpg',
+                              banners: ['../../images/banner.jpg',
+                                    '../../images/banner.jpg',
                                     '../../images/banner.jpg',
                               ]
                         }
@@ -209,6 +264,43 @@ Page({
                   })
                   console.log(this.data.list)
             }
+      },
+      formatlist1: function (list) {
+            const data = list
+            data.forEach((item) => {
+                  item.date = formatDate1(item.date)
+            })
+            return data
+      },
+      formatlist2: function (list) {
+            const data = list
+            data.forEach((item) => {
+                  item.date = formatDate2(item.date)
+            })
+            return data
+      },
+      follow: function() {
+            let idolInfo = this.data.idolInfo
+            idolInfo[this.data.idol_index].is_follow = 1
+            console.log(idolInfo)
+            this.setData({
+                  is_show: true,
+            })
+            setTimeout(() => {
+                  this.setData({
+                        idolInfo: idolInfo
+                  })
+            }, 300)
+      },
+      closePopup: function() {
+            this.setData({
+                  is_show: false
+            })
+      },
+      turnToSupport: function() {
+            this.setData({
+                  tabCurrent: 2
+            })
       },
 
       /**

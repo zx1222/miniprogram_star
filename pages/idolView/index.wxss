@@ -164,12 +164,12 @@
 
 @keyframes fadeInDown {
       from {
-            transform: translate3d(-100%, -90%, 0);
+            transform: translate3d(-100%, -45%, 0);
             opacity: 0;
       }
 
       to {
-            transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0%, 0);
             opacity: 1;
       }
 }
@@ -179,7 +179,7 @@
       width: 100%;
       bottom: 0;
       opacity: 0;
-      animation: fadeInDown 0.4s 0.3s ease-in 1;
+      animation: fadeInDown 0.4s 0.2s ease-in 1;
       animation-fill-mode: forwards;
 }
 
@@ -187,7 +187,7 @@
       position: absolute;
       top: 40rpx;
       opacity: 0;
-      animation: fadeInLeft 0.5s 0.5s ease-in 1;
+      animation: fadeInLeft 0.5s 0.45s ease-in 1;
       animation-fill-mode: forwards;
 }
 
@@ -237,22 +237,22 @@
 }
 
 .desc-image .info-list .item:nth-child(1) {
-      animation: slideInRightSkew 0.2s 1.1s linear 1;
+      animation: slideInRightSkew 0.2s 1s linear 1;
       animation-fill-mode: forwards;
 }
 
 .desc-image .info-list .item:nth-child(2) {
-      animation: slideInRightSkew 0.2s 1.3s linear 1;
+      animation: slideInRightSkew 0.2s 1.2s linear 1;
       animation-fill-mode: forwards;
 }
 
 .desc-image .info-list .item:nth-child(3) {
-      animation: slideInRightSkew 0.2s 1.5s linear 1;
+      animation: slideInRightSkew 0.2s 1.4s linear 1;
       animation-fill-mode: forwards;
 }
 
 .desc-image .info-list .item:nth-child(4) {
-      animation: slideInRightSkew 0.2s 1.7s linear 1;
+      animation: slideInRightSkew 0.2s 1.6s linear 1;
       animation-fill-mode: forwards;
 }
 
@@ -291,6 +291,70 @@
       font-family: 'FZLTHJT';
       line-height: 1.7;
       transform: translate3d(150%, 0, 0);
-      animation: slideInRightNormal 0.2s 1.9s linear 1;
+      animation: slideInRightNormal 0.2s 1.8s linear 1;
       animation-fill-mode: forwards;
+}
+
+/* 关注成功popup */
+.poster {
+      width: 91.6%;
+      height: 90%;
+      background: url('http://192.168.0.189/20180507/star_project/web/star_img/follow-poster-border.png');
+      background-size: 100% 100%;
+}
+
+.poster-inner {
+      width: 87%;
+      height: 90%;
+      margin: 7%;
+      padding: 30rpx;
+}
+
+.poster-inner .header {
+      font-size: 45rpx;
+      font-family: 'FZLTHJT';
+      line-height: 1.4;
+}
+
+.poster-inner .header .btn-wrp {
+      padding: 24rpx 0;
+}
+
+.poster-inner .header .btn-audio {
+      width: 334rpx;
+      height: 62rpx;
+      background: #fff;
+      font-size: 24rpx;
+      color: #706f6f;
+      line-height: 62rpx;
+      border-radius: 4rpx;
+      position: relative;
+}
+
+.poster-inner .header .btn-audio::before {
+      content: '';
+      width: 14rpx;
+      height: 14rpx;
+      background-color: inherit;
+      right: -6rpx; /*向左侧外部延伸箭头box的一半宽度*/
+      position: absolute;
+      transform: rotate(45deg); /*旋转45度*/
+      top: 50%; /*箭头在数值方向上居中*/
+      margin-top: -5px;
+}
+
+.poster-inner .header .btn-support {
+      background: #fff;
+      border-radius: 4rpx;
+      font-size: 24rpx;
+      width: 184rpx;
+      height: 62rpx;
+      line-height: 62rpx;
+}
+
+.btn-close {
+      position: absolute;
+      top: 2%;
+      right: 4%;
+      width: 32rpx;
 }

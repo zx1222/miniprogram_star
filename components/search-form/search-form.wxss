@@ -32,15 +32,15 @@
       margin: 10rpx 0;
       height: calc(100% - 20rpx);
       text-align: center;
-      line-height: calc(100% - 20rpx);
       float: left;
 }
 .searchForm .input-wrp .r input{
-         height: calc(100% - 20rpx);
+         height:0.8rem;
          text-align: left;
          padding: 0 17rpx;
-         min-height:0.8rem;
+         min-height:1rem;
          font-size: 24rpx;
+         line-height: 0.8rem;
 }
 
 

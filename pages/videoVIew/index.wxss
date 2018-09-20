@@ -22,7 +22,10 @@
       padding: 20rpx 10rpx 10rpx 10rpx;
       line-height: 1.6;
 }
-
+.icon{
+      font-size: 25rpx;
+      color: #787878;
+}
 .video .video-title {
       font-size: 30rpx;
       letter-spacing: 1px;
@@ -52,7 +55,7 @@
       font-size: 28rpx;
       padding: 4rpx 0rpx;
       background: #ebebeb;
-      border-radius: 14%/50%;
+      border-radius: 9%/50%;
       width: auto;
       text-align: center;
       padding-left: -6rpx;
@@ -62,7 +65,7 @@
 
 .comment-input-wrp input.cover {
       width: 100%;
-      border-radius: 6%/50%;
+      border-radius:2%/50%;
 }
 
 .comment-input-wrp input.cover {
@@ -86,12 +89,12 @@
 }
 
 .comment-input-wrp .icon {
-      width: 28rpx;
+      /* width: 28rpx; */
       padding-right: 6rpx;
 }
 
 .comment-input-wrp .icon.icon-comment {
-      width: 24rpx;
+      /* width: 24rpx; */
 }
 
 .comment-input-wrp .item-count {

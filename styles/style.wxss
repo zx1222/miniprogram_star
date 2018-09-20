@@ -103,8 +103,14 @@ image {
 
 /* text size */
 
-.text-xs {
+.text-s {
       font-size: 24rpx;
+}
+.text-xs {
+      font-size: 22rpx;
+}
+.text-xxs {
+      font-size: 18rpx;
 }
 
 .text-m {

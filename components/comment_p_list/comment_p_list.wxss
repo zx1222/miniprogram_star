@@ -1,7 +1,8 @@
+@import '../../styles/icon.wxss';
 @import '../../styles/fontawsome.wxss';
+
 @import '../../styles/style.wxss';
 /* comment list */
-
 .comment-wrp {
       padding: 25rpx 0;
 }
@@ -48,12 +49,12 @@
 }
 
 .comment-wrp .content .hd .icon {
-      width: 24rpx;
+      /* width: 24rpx; */
       padding-right: 6rpx;
 }
 
 .comment-wrp .content .hd .icon-like, .comment-wrp .content .hd .icon-report {
-      width: 28rpx;
+      /* width: 28rpx; */
 }
 
 .comment-wrp .content .child-comment-tips {

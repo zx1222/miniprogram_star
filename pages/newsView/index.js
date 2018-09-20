@@ -18,9 +18,7 @@ Page({
             currentPage: 1,
             pageSize: 10,
 
-            banners: ['../../images/banner.jpg',
-                  '../../images/banner.jpg',
-                  '../../images/banner.jpg',
+            banners: ['../../images/banner.jpg'
             ],
             imgheights: [],
             indicatorDots: false,
