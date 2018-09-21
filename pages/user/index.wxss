@@ -8,8 +8,7 @@
 }
 
 .user .header {
-      padding: 124rpx 0 84rpx;
-      padding-left: 60rpx;
+      padding: 124rpx 0 84rpx 60rpx;
 }
 
 .user .name-wrp {

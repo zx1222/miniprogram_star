@@ -1,6 +1,6 @@
 <view class="container user">
       <view class='header flex'>
-            <view class='avatar' style='    box-shadow:0 0 0 1px  #bfbfc0,0 0 0 10rpx {{genderTheme.main}},0 0 0 18rpx {{genderTheme.sub}}'>
+            <view class='avatar' style='box-shadow:0 0 0 1px  #bfbfc0,0 0 0 10rpx {{genderTheme.main}},0 0 0 18rpx {{genderTheme.sub}}'>
                   <image class='w100' src='{{userInfo.avatar}}' mode='widthFix'></image>
             </view>
             <view class="name-wrp flex flex-c justify-content-center">
