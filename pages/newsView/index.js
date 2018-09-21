@@ -10,6 +10,8 @@ Page({
        * 页面的初始数据
        */
       data: {
+            gender:2,
+            genderTheme:{},
             // 是否获得焦点
             is_focus:false,
             // 分页
@@ -80,8 +82,19 @@ Page({
             let comment_list = this.data.comment_list;
 
             this.setData({
+                  gender:app.globalData.gender,
+                  genderTheme: app.globalData.genderTheme[app.globalData.gender-1],
                   comment_list: this.formatCommentData(this.data.comment_list)
             })
+            wx.setNavigationBarColor({
+                  frontColor: '#ffffff',
+                  backgroundColor: this.data.genderTheme.sub,
+                  animation: {
+                        duration: 400,
+                        timingFunc: 'easeIn'
+                  }
+            })
+            
       },
       formatCommentData:function(data){
             let list=data;

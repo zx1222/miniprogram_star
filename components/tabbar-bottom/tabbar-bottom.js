@@ -8,6 +8,10 @@ Component({
               type: 'number',
               value: 0
         },
+        genderTheme:{
+              type: 'Object',
+              value: {}
+        }
   },
 
   /**

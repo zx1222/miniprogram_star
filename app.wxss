@@ -134,3 +134,9 @@ button::after {
       box-shadow: 0 0 0 0.5px #fff;
       /* box-shadow: 0 0 0 2px rgba(15,15,15,.6), 0 0 0 3px #ffffff; */
 }
+
+/* 底部导航 */
+tabbar-bottom{
+      position: fixed;
+      bottom: 0;
+}

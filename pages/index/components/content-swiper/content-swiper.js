@@ -10,7 +10,11 @@ Component({
             indicatorArr:{
                   type:'Array',
                   value:[]
-            }
+            },
+            genderTheme: {
+                  type: 'Array',
+                  value: []
+            },
       },
 
       /**

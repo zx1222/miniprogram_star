@@ -1,4 +1,4 @@
-// pages/genderTheme/index.js
+// pages/user/index.js
 const app = getApp()
 import {
       wxRequest
@@ -9,8 +9,15 @@ Page({
        * 页面的初始数据
        */
       data: {
+            tab_bottom_id: 4,
             gender: 2,
-            genderTheme: []
+            is_seletpopup_show: true,
+            genderThemeArr: [],
+            genderTheme: {},
+            userInfo: {
+                  avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1788562038,3472846301&fm=26&gp=0.jpg',
+                  nickname: '战斗吧歌姬'
+            },
       },
 
       /**
@@ -18,7 +25,17 @@ Page({
        */
       onLoad: function(options) {
             this.setData({
-                  genderTheme: app.globalData.genderTheme
+                  gender: app.globalData.gender,
+                  genderThemeArr: app.globalData.genderTheme,
+                  genderTheme: app.globalData.genderTheme[app.globalData.gender - 1]
+            })
+            wx.setNavigationBarColor({
+                  frontColor: '#ffffff',
+                  backgroundColor: this.data.genderTheme.sub,
+                  animation: {
+                        duration: 400,
+                        timingFunc: 'easeIn'
+                  }
             })
       },
 
@@ -49,6 +66,21 @@ Page({
       onUnload: function() {
 
       },
+
+      /**
+       * 页面相关事件处理函数--监听用户下拉动作
+       */
+      onPullDownRefresh: function() {
+
+      },
+
+      /**
+       * 页面上拉触底事件的处理函数
+       */
+      onReachBottom: function() {
+
+      },
+
       selectTheme: function(e) {
             this.setData({
                   gender: parseInt(e.currentTarget.dataset.id)
@@ -56,7 +88,7 @@ Page({
             if (this.data.gender == 1) {
                   wx.setNavigationBarColor({
                         frontColor: '#ffffff',
-                        backgroundColor: this.data.genderTheme[0].sub,
+                        backgroundColor: this.data.genderThemeArr[0].sub,
                         animation: {
                               duration: 400,
                               timingFunc: 'easeIn'
@@ -66,7 +98,7 @@ Page({
             if (this.data.gender == 2) {
                   wx.setNavigationBarColor({
                         frontColor: '#ffffff',
-                        backgroundColor: this.data.genderTheme[1].sub,
+                        backgroundColor: this.data.genderThemeArr[1].sub,
                         animation: {
                               duration: 400,
                               timingFunc: 'easeIn'
@@ -76,8 +108,13 @@ Page({
       },
       confirmGender: function(e) {
             app.globalData.gender = this.data.gender
-            console.log(app.globalData.gender)
+            this.setData({
+                  is_seletpopup_show: false,
+                  gender: app.globalData.gender,
+                  genderTheme: app.globalData.genderTheme[this.data.gender - 1],
+            })
       },
+
       /**
        * 用户点击右上角分享
        */

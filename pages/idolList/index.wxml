@@ -8,7 +8,7 @@
                   <image wx:if="{{index==4}}" src='../../images/idol-list-border5.png' class='border'></image>
                   <view class='item-content w100 flex justify-content-between align-items-center'>
                         <view class='avatar-wrp'>
-                              <view class='idol-avatar' style="box-shadow:0 0 01px #c0c0c0,0 0 0 8rpx {{idolTheme[index].main}},0 0 0 16rpx {{idolTheme[index].sub}}">
+                              <view class='idol-avatar' style="box-shadow:0 0 0 1px #c0c0c0,0 0 0 8rpx {{idolTheme[index].main}},0 0 0 16rpx {{idolTheme[index].sub}}">
                                     <image src='{{item.avatar}}' mode='widthFix' class='w100'></image>
                               </view>
                         </view>
@@ -31,7 +31,7 @@
             </view>
       </view>
 
-      <tabbar-bottom class="w100" tab_id="{{tab_id}}"></tabbar-bottom>
+      <tabbar-bottom class="w100" tab_id="{{tab_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom>
 
 <!-- 关注成功popup -->
       <view class="popup flex align-items-center justify-content-center" wx:if="{{is_show}}">

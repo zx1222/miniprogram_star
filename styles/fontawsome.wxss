@@ -35,3 +35,6 @@
 .fa-plus-circle:before {
   content: "\f055";
 }
+.fa-angle-right:before {
+  content: "\f105";
+}

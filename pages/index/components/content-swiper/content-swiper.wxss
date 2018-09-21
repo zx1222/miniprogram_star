@@ -44,7 +44,7 @@ page, .user-container, .footer, .content-swiper {
 }
 .slider-line .line-inner{
       width: 60%;
-         background: #f66a94;
+         /* background: #f66a94; */
          height: 6rpx;
          margin-left:20%;
 }

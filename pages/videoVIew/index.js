@@ -11,6 +11,8 @@ Page({
        * 页面的初始数据
        */
       data: {
+            gender:2,
+            genderTheme:{},
             // 是否获得焦点
             is_focus: false,
             // 分页
@@ -73,9 +75,18 @@ Page({
       onLoad: function(options) {
             const item=this.data.item;
             item.date = formatDate2(item.date)
-            console.log(item)
             this.setData({
-                  item:item
+                  item: item,
+                  gender: app.globalData.gender,
+                  genderTheme: app.globalData.genderTheme[app.globalData.gender - 1],
+            })
+            wx.setNavigationBarColor({
+                  frontColor: '#ffffff',
+                  backgroundColor: this.data.genderTheme.sub,
+                  animation: {
+                        duration: 400,
+                        timingFunc: 'easeIn'
+                  }
             })
       },
 

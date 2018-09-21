@@ -10,6 +10,7 @@ Page({
        */
       data: {
             gender: 1,
+            genderTheme: {},
             tab_id: 1,
             idol_index: 2,
             idolTheme: [],
@@ -20,7 +21,7 @@ Page({
                         name: '卡缇娅',
                         desc: '除了祖国的命令，\n只有游戏才能让她动起来的萝莉',
                         is_follow: 2,
-                  name: '卡缇娅·乌拉诺娃',
+                        name: '卡缇娅·乌拉诺娃',
                   },
                   {
                         index: 1,
@@ -67,31 +68,17 @@ Page({
       onLoad: function(options) {
             this.setData({
                   gender: app.globalData.gender,
-                  genderTheme: app.globalData.genderTheme,
+                  genderTheme: app.globalData.genderTheme[app.globalData.gender - 1],
                   idolTheme: app.globalData.idolTheme
             })
-            if (this.data.gender == 1) {
-                  wx.setNavigationBarColor({
-                        frontColor: '#ffffff',
-                        backgroundColor: this.data.genderTheme[0].main,
-                        animation: {
-                              duration: 400,
-                              timingFunc: 'easeIn'
-                        }
-
-                  })
-            }
-            if (this.data.gender == 2) {
-                  wx.setNavigationBarColor({
-                        frontColor: '#ffffff',
-                        backgroundColor: this.data.genderTheme[1].main,
-                        animation: {
-                              duration: 400,
-                              timingFunc: 'easeIn'
-                        }
-
-                  })
-            }
+            wx.setNavigationBarColor({
+                  frontColor: '#ffffff',
+                  backgroundColor: this.data.genderTheme.sub,
+                  animation: {
+                        duration: 400,
+                        timingFunc: 'easeIn'
+                  }
+            })
       },
 
       /**

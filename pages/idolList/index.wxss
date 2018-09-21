@@ -4,13 +4,8 @@
       width: 100%;
       height: 100%;
       font-family: 'FZLTHJT';
-}
-
-/* 底部导航 */
-
-tabbar-bottom {
-      position: fixed;
-      bottom: 0;
+      background: url('http://192.168.0.189/20180507/star_project/web/star_img/bg-idol-list.png');
+      background-size: 100% 100%;
 }
 
 .idol-list {
@@ -52,7 +47,7 @@ tabbar-bottom {
       font-size: 16rpx;
       position: absolute;
       left: -26rpx;
-      top:14rpx;
+      top: 14rpx;
 }
 
 .item .idol-info {
