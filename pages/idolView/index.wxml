@@ -1,5 +1,5 @@
 <!--pages/idolView/index.wxml-->
-<view class='container'>
+<view class="container {{is_post_show&&tabCurrent==2?'overflow-y-hidden':''}}">
       <view class="tab" style=" border-bottom: 1px solid {{idolTheme[idol_index].main}};">
             <text wx:for="{{tabArr}}" wx:key="{{index}}" data-index="{{index}}" bindtap="tapIndicator" class="indicator-item" style="color:{{tabCurrent === index? idolTheme[idol_index].main : '' }};">{{item}}</text>
             <view class="slider-line" style="transform: translateX({{tabCurrent * 100}}%);">

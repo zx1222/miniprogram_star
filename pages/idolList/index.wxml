@@ -1,4 +1,4 @@
-<view class="container text-black ">
+<view class="container text-black">
       <view class='idol-list flex  flex-c justify-content-between' >
             <view class=' w100 item ' wx:for="{{list}}" wx:key="{{index}}" bindtap='turnToView' data-index="{{item.index}}">
                   <image wx:if="{{index==0}}" src='../../images/idol-list-border1.png' class='border'></image>

@@ -1,28 +1,31 @@
 {
-      "pages": [
-            "pages/index/index",
-            "pages/editUserInfo/index",
-            "pages/user/index",
-            "pages/genderTheme/index",
-            "pages/idolList/index",
-            "pages/videoVIew/index",
-            "pages/home/index",
-            "pages/newsView/index",
-            "pages/replyComment/index",
-            "pages/idolView/index"
-      ],
-      "window": {
-            "backgroundTextStyle": "#333333",
-            "navigationStyle": "default",
-            "navigationBarBackgroundColor": "#f4a9b8",
-            "navigationBarTextStyle": "white",
-            "navigationBarTitleText": "歌姬动态",
-            "enablePullDownRefresh": true
-      },
-      "plugins": {
-            "tencentvideo": {
-                  "version": "1.1.8",
-                  "provider": "wxa75efa648b60994b"
-            }
-      }
+  "pages": [
+"pages/index/index",
+    "pages/task/index",
+    "pages/editUserInfo/index",
+    
+    "pages/user/index",
+    "pages/genderTheme/index",
+    "pages/idolList/index",
+    "pages/videoVIew/index",
+    "pages/home/index",
+    "pages/newsView/index",
+    "pages/replyComment/index",
+    "pages/idolView/index"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "#333333",
+    "navigationStyle": "default",
+    "navigationBarBackgroundColor": "#f4a9b8",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "歌姬动态",
+    "enablePullDownRefresh": true
+  },
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.1.8",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
 }

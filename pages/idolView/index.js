@@ -329,8 +329,8 @@ Page({
             })
       },
       turnToSupport: function() {
-            this.setData({
-                  tabCurrent: 2
+            wx.navigateTo({
+              url: '/pages/task/index',
             })
       },
       // 选择发布类型

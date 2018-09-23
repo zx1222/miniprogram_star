@@ -20,8 +20,8 @@ Page({
         },
         birthday: {
               value: '1995-06-10',
-              selected: false,
-              valid: false
+              selected: true,
+              valid: true
         },
         
   },
