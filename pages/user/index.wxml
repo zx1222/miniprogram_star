@@ -5,7 +5,7 @@
             </view>
             <view class="name-wrp flex flex-c justify-content-center">
                   <view class='nickname text-m bold letter-sp2' style='color:{{genderTheme.main}}'>{{userInfo.nickname}}</view>
-                  <view class='btn-modify letter-sp1 text-s text-center' style='background:{{genderTheme.main}}'>编辑信息</view>
+                  <view class='btn-modify letter-sp1 text-s text-center' style='background:{{genderTheme.main}}' bindtap='turnToEditInfo'>编辑信息</view>
             </view>
       </view>
       <view class='entrance-list'>
@@ -48,7 +48,7 @@
 </view>
 <tabbar-bottom class="w100" tab_id="{{tab_bottom_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom>
 
-<view class='popup genderTheme flex  align-items-center justify-content-center' wx:if="{{is_seletpopup_show}}">
+<view class='popup genderTheme flex  align-items-center justify-content-center' wx:if="{{is_seletpopup_show&&is_gender_selected==2}}">
       <view wx:if="{{gender==1}}" class='select-box-male select-box flex flex-c'>
             <view class='header w100 text-center' style='color:{{genderThemeArr[0].main}}'>
                   <view class='hd1 text-m bold letter-sp2'>皮肤选择</view>

@@ -13,6 +13,7 @@ Page({
     genderTheme: {},
     idolTheme: {},
     idol_index: 0,
+    idol_info:[],
     task_list: [
       {
         task_id: '1',
@@ -83,12 +84,19 @@ Page({
     this.setData({
       idolTheme: app.globalData.idolTheme,
       idol_index: app.globalData.idol_index,
+      idol_info:app.globalData.idol_list,
       gender: app.globalData.gender,
       genderTheme: app.globalData.genderTheme[app.globalData.gender - 1],
     })
+ 
+    wx.setNavigationBarTitle({
+      title: this.data.idol_info[this.data.idol_index].name,
+    })
+    console.log(this.data.idolTheme)
+    console.log()
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
-      backgroundColor: this.data.genderTheme.sub,
+      backgroundColor: this.data.idolTheme[this.data.idol_index].main,
       animation: {
         duration: 400,
         timingFunc: 'easeIn'

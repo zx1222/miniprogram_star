@@ -175,6 +175,7 @@ Page({
                   idolTheme: app.globalData.idolTheme,
                   list: this.formatlist1(this.data.list)
             })
+            console.log()
             wx.setNavigationBarTitle({
                   title: this.data.idolInfo[this.data.idol_index].name,
             })

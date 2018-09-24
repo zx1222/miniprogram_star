@@ -82,7 +82,7 @@ Page({
             })
             wx.setNavigationBarColor({
                   frontColor: '#ffffff',
-                  backgroundColor: this.data.genderTheme.sub,
+                  backgroundColor: this.data.genderTheme.main,
                   animation: {
                         duration: 400,
                         timingFunc: 'easeIn'

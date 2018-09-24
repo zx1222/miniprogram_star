@@ -48,3 +48,9 @@ font-size: 24rpx;
 line-height: 50rpx;
 padding-left: 12rpx;
 }
+.form-wrp .btn{
+  width: 180rpx;
+  height: 46rpx;
+  line-height: 42rpx;
+  border-radius: 4rpx;
+}
