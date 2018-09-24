@@ -465,3 +465,9 @@
       padding-top: 36rpx;
       letter-spacing: 2px;
 }
+
+/* 编辑帖子 */
+forum{
+  position: fixed;
+  bottom: 0;
+}

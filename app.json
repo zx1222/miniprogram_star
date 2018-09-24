@@ -13,7 +13,9 @@
     "pages/replyComment/index",
     "pages/idolView/index",
     "pages/fansLeaderBoard/index",
-    "pages/searchResult/index"
+    "pages/searchResult/index",
+    "pages/forumView/index",
+    "pages/commentView/index"
     
   ],
   "window": {

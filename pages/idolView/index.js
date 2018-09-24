@@ -163,7 +163,6 @@ Page({
     ],
     // 发布类型与否
     is_post_show: false,
-
   },
 
   /**
@@ -341,7 +340,12 @@ Page({
       is_post_show: true
     })
   },
-
+  catchForumSubmit:function(e){
+    console.log(e.detail)
+    this.setData({
+      is_post_show:e.detail
+    })
+  },
   /**
    * 用户点击右上角分享
    */

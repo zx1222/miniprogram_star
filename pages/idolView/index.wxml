@@ -205,7 +205,7 @@
 </view>
 
 <!-- 发布类型选择popup -->
-<view class="popup post-type flex align-items-center justify-content-center" wx:if="{{is_post_show&&tabCurrent==2}}">
+<view class="popup post-type flex align-items-center justify-content-center" wx:if="{{false}}">
 <view class='flex align-items-center'>
       <view class='btn-wrp'>
             <image class='icon' src='../../images/icon-text.png' mode='widthFix' bindtap='turnToPost' data-id='1'></image>
@@ -220,3 +220,5 @@
       <image bindtap='closePopup' class='btn-close' src='../../images/icon-close.png' mode='widthFix'></image>
 
 </view>
+
+<forum wx:if="{{is_post_show}}" bind:submitForum='catchForumSubmit' idolTheme="{{idolTheme[idol_index]}}"></forum>

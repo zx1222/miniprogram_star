@@ -1,5 +1,5 @@
 <view class='forum-wrp'>
-      <view class='item-forum ' wx:for="{{forum_list}}">
+      <view class='item-forum ' wx:for="{{forum_list}}" bindtap='turnTOVIew'>
             <view class='hd'>
                   <view class='avatar'>
                         <image class='w100' src='{{item.user_avatar}}' mode='widthFix'></image>
