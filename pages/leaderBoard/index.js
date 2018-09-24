@@ -16,7 +16,7 @@ Page({
     tabArr: ['歌姬人气榜', '粉丝贡献榜'],
     tabCurrent: 0,
     // 动态tab
-    indicatorArr: ['事实周榜', '月榜', '年榜'],
+    indicatorArr: ['实时周榜', '月榜', '年榜'],
     swiperCurrent: 0,
     idolTheme: [],
     idol_index: 0,
