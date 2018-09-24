@@ -57,6 +57,7 @@ Page({
                   }
             ],
             is_show: false,
+        is_unfollow_show:false,
             toast_title: '浏览视频成功',
             toast_content: '你为清歌增加了10点人气值',
             is_toast_show: true
@@ -128,6 +129,12 @@ Page({
                   idol_index: e.currentTarget.dataset.id,
                   is_show: true
             })
+      },
+      unfollow:function(e){
+        this.setData({
+          idol_index: e.currentTarget.dataset.id,
+          is_unfollow_show: true
+        })
       },
       turnToSupport: function() {
 

@@ -130,7 +130,7 @@ Page({
     myRankings: {
       gender: 1,
       avatar: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537787707649&di=89c23d2228ed35ccda59d23ceedf0a2e&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201407%2F30%2F20140730012845_tiG3J.thumb.700_0.png',
-      name: '我自己',
+      name: 'xin',
       point: '64895',
       level: 100
     },

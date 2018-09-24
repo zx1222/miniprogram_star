@@ -30,6 +30,11 @@ Component({
                   this.triggerEvent('search', this.data.searchQuery, {
                         bubbles: false
                   });
+                  if(this.data.searchQuery!=''){
+                    wx.navigateTo({
+                      url: '/pages/searchResult/index',
+                    })
+                  }
             },
       }
 })

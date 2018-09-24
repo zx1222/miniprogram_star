@@ -11,7 +11,7 @@
             </view>
             <view class='comment-input-wrp w100 flex justify-content-between align-items-center'>
                   <view class="input-wrp {{is_focus?'cover':''}}">
-                        <input class="{{is_focus?'cover':''}}" placeholder="我也说一句..." placeholder-class='placeholder bold letter-sp1' bindfocus="focusChange" bindblur='blurChange' focus="{{false}}" />
+                        <input class="{{is_focus?'cover':''}}" placeholder="我也说一句..." placeholder-class='placeholder bold letter-sp1' bindfocus="focusChange" bindblur='blurChange' focus="{{false}}" confirm-type='send'  />
                   </view>
 
                   <view class="{{is_focus?'hidden':''}}  count-wrp flex  align-items-center justify-content-end  text-xs">

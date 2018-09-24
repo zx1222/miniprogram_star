@@ -164,6 +164,7 @@
                   <image src='../../images/follow-poster.png' class='poster-img w100' mode='widthFix'></image>
             </view>
       </view>
+      <text class='text-s text-white tips'>长按图片进行保存，分享到朋友圈</text>
       <image bindtap='closePopup' class='btn-close' src='../../images/icon-close.png' mode='widthFix'></image>
 </view>
 

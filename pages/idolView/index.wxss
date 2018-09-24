@@ -358,6 +358,12 @@
       right: 4%;
       width: 32rpx;
 }
+.tips{
+  position: absolute;
+  width: 100% ;
+  text-align: center;
+  bottom:2%
+}
 
 /* 应援规则 */
 

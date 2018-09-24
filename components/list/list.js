@@ -91,7 +91,7 @@ Component({
             },
             turnToViewVideo: function() {
                   wx.navigateTo({
-                        url: `/pages/videoVIew/index?${this.data.id}`,
+                        url: `/pages/videoView/index?${this.data.id}`,
                   })
             },
             turnToViewNews: function() {

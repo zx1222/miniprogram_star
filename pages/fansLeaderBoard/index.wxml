@@ -27,11 +27,11 @@
         <image wx:if="{{myRankings.level==1}}" src='../../images/icon-gold.png' mode='widthFix' class='' class='icon'></image>
         <image wx:if="{{myRankings.level==2}}" src='../../images/icon-silver.png' mode='widthFix' class='' class='icon'></image>
         <image wx:if="{{myRankings.level==3}}" src='../../images/icon-bronze.png' mode='widthFix' class='' class='icon'></image>
-        <view wx:if="{{myRankings.level!=1&&myRankings.level!=2&&myRankings.level!=3}}" class="ranking bold italic">{{myRankings.level}}</view>
-        <view class="avatar-wrp {{item.gender==1?'bg1':'bg2'}}">
-          <image src='{{myRankings.avatar}}' mode='widthFix' class="avatar {{item.gender==1?'border1':'border2'}}"></image>
+        <view wx:if="{{myRankings.level!=1&&myRankings.level!=2&&myRankings.level!=3}}" class="ranking bold italic" style="color:#e95471">{{myRankings.level}}</view>
+        <view class="avatar-wrp {{myRankings.gender==1?'bg1':'bg2'}}">
+          <image src='{{myRankings.avatar}}' mode='widthFix' class="avatar {{myRankings.gender==1?'border1':'border2'}}"></image>
         </view>
-        <view class='name bold' style='color:{{genderTheme[item.gender-1].main}}'>{{myRankings.name}}</view>
+        <view class='name bold' style='color:{{genderTheme[myRankings.gender-1].main}}'>{{myRankings.name}}</view>
       </view>
 
       <view class='text-black'>

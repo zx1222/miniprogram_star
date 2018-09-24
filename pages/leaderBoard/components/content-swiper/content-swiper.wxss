@@ -5,32 +5,32 @@ page, .user-container, .footer,.content-swiper{
 }
 .bg1{
 background: url('https://star.t.miinno.net/star_img/leader-board-bg1.jpg') no-repeat;
-background-size: 100% 100%;
-background-position:0 -120rpx;
+background-size: 100% auto;
+background-position:0 -100rpx;
 
 }
 .bg2{
 background: url('https://star.t.miinno.net/star_img/leader-board-bg2.jpg') no-repeat;
-background-size: 100% 100%;
-background-position:0 -120rpx;
+background-size: 100% auto;
+background-position:0 -100rpx;
 
 }
 .bg3{
 background: url('https://star.t.miinno.net/star_img/leader-board-bg3.jpg') no-repeat;
-background-size: 100% 100%;
-background-position:0 -120rpx;
+background-size: 100% auto;
+background-position:0 -100rpx;
 
 }
 .bg4{
 background: url('https://star.t.miinno.net/star_img/leader-board-bg4.jpg') no-repeat;
-background-size: 100% 100%;
-background-position:0 -120rpx;
+background-size: 100% auto;
+background-position:0 -100rpx;
 
 }
 .bg5{
 background: url('https://star.t.miinno.net/star_img/leader-board-bg5.jpg') no-repeat;
-background-size: 100% 100%;
-background-position:0 -120rpx;
+background-size: 100% auto;
+background-position:0 -100rpx;
 
 }
 

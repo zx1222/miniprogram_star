@@ -33,7 +33,7 @@
 
 
       <view class='comment-input-wrp w100 flex justify-content-between align-items-center'>
-            <input class="{{is_focus?'cover':''}}" placeholder="我也说一句..." placeholder-class=' text-s text-blue bold letter-sp2' bindfocus="focusChange" bindblur='blurChange' focus="{{false}}" />
+            <input class="{{is_focus?'cover':''}}" placeholder="我也说一句..." placeholder-class=' text-s text-blue bold letter-sp2' bindfocus="focusChange" bindblur='blurChange' focus="{{false}}" confirm-type='send'/>
             <view class="{{is_focus?'hidden':''}}  count-wrp flex  align-items-center justify-content-end  text-s">
                   <view class='item-count flex align-items-center justify-content-end'>
                   <text class='icon icomoon icon-message'></text>

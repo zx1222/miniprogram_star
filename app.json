@@ -8,11 +8,12 @@
     "pages/editUserInfo/index",
     "pages/genderTheme/index",
     "pages/idolList/index",
-    "pages/videoVIew/index",
+    "pages/videoView/index",
     "pages/newsView/index",
     "pages/replyComment/index",
     "pages/idolView/index",
-    "pages/fansLeaderBoard/index"
+    "pages/fansLeaderBoard/index",
+    "pages/searchResult/index"
     
   ],
   "window": {

@@ -149,21 +149,21 @@ Page({
     if (this.data.tab_top_id == 0) {
       this.setData({
         idol_leader_list: [{
-            id: 2,
-            hot_num: 1000,
-          },
-          {
-            id: 1,
-            hot_num: 1000,
-          },
-          {
-            id: 3,
-            hot_num: 1000,
-          },
-          {
-            id: 4,
-            hot_num: 1000,
-          },
+          id: 5,
+          hot_num: 1000,
+        },
+        {
+          id: 1,
+          hot_num: 1000,
+        },
+        {
+          id: 3,
+          hot_num: 1000,
+        },
+        {
+          id: 4,
+          hot_num: 1000,
+        },
         ],
       })
 
