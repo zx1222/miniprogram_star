@@ -22,7 +22,7 @@
 <view wx:if="{{tab_id!=6&&p_swiper==1}}" class='list-wrp list-wrp-video '>
       <view class='item video-item' wx:for="{{list}}" wx:key="{{index}}" bindtap='turnToViewVideo'>
             <view class='poster-wrp w100'>
-                  <image class='poster-border w100' src='http://192.168.0.189/20180507/star_project/web/star_img/video-border.png' mode='widthFix'></image>
+                  <image class='poster-border w100' src='https://star.t.miinno.net/star_img/video-border.png' mode='widthFix'></image>
                   <image class='poster w100' src='{{item.poster}}' mode='widthFix'></image>
             </view>
             <view class='video-info'>
@@ -59,7 +59,7 @@
                   </view>
             </view>
             <view class='poster-wrp '>
-                  <image class='poster-border w100' src='http://192.168.0.189/20180507/star_project/web/star_img/video-border.png' mode='widthFix'></image>
+                  <image class='poster-border w100' src='https://star.t.miinno.net/star_img/video-border.png' mode='widthFix'></image>
                   <image class='poster w100' src='{{item.poster}}' mode='widthFix'></image>
             </view>
       </view>
@@ -72,7 +72,7 @@
 <view wx:if="{{tab_id!=5&&p_swiper==2}}" class='list-wrp list-wrp-video '>
       <view class='item video-item' wx:for="{{list}}" wx:key="{{index}}" bindtap='turnToViewVideo'>
             <view class='poster-wrp w100'>
-                  <image class='poster-border w100' src='http://192.168.0.189/20180507/star_project/web/star_img/video-border.png' mode='widthFix'></image>
+                  <image class='poster-border w100' src='https://star.t.miinno.net/star_img/video-border.png' mode='widthFix'></image>
                   <image class='poster w100' src='{{item.poster}}' mode='widthFix'></image>
             </view>
             <view class='flex align-items-center row justify-content-between'>
@@ -105,7 +105,7 @@
                   </view>
             </view>
             <view class='poster-wrp '>
-                  <image class='poster-border w100' src='http://192.168.0.189/20180507/star_project/web/star_img/video-border.png' mode='widthFix'></image>
+                  <image class='poster-border w100' src='https://star.t.miinno.net/star_img/video-border.png' mode='widthFix'></image>
                   <image class='poster w100' src='{{item.poster}}' mode='widthFix'></image>
             </view>
       </view>

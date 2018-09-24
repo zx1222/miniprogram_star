@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/leaderBoard/index",
     "pages/user/index",
@@ -10,7 +11,8 @@
     "pages/videoVIew/index",
     "pages/newsView/index",
     "pages/replyComment/index",
-    "pages/idolView/index"
+    "pages/idolView/index",
+    "pages/fansLeaderBoard/index"
     
   ],
   "window": {

@@ -47,7 +47,7 @@ Page({
                   }
             ],
             // list 分页
-            loading: true,
+            loading: false,
             noData: false,
             currentPage: 1,
             pageSize: 10,

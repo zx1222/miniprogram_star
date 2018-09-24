@@ -29,7 +29,7 @@ Component({
               // 设置字体
               wx.loadFontFace({
                     family: 'FZLTHJT',
-                    source: 'url("http://192.168.0.189/20180507/star_project/web/FZLTHJT.TTF")',
+                source: 'url("https://star.t.miinno.net/star_img/FZLTHJT.TTF")',
                     success: function (res) {
                           console.log(res.status) //  loaded
                     },

@@ -30,15 +30,15 @@
                         </view>
                         <view class='count-wrp'>
                               <view class='row w100'>
-                                    <text class='label text-s  text-black bold'>人气值:</text>
+                                    <text class='label text-xs  text-black bold'>人气值:</text>
                                     <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].hot}}</text>
                               </view>
                               <view class='row w100'>
-                                    <text class='label text-s  text-black bold'>粉丝数量:</text>
+                                    <text class='label text-xs  text-black bold'>粉丝数量:</text>
                                     <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].fans}}</text>
                               </view>
                               <view class='row w100'>
-                                    <text class='label text-s  text-black bold'>人气排名:</text>
+                                    <text class='label text-xs  text-black bold'>人气排名:</text>
                                     <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].rank}}</text>
                               </view>
 
@@ -116,15 +116,15 @@
                         </view>
                         <view class='count-wrp'>
                               <view class='row w100'>
-                                    <text class='label text-s  text-black bold'>人气值:</text>
+                                    <text class='label text-xs  text-black bold'>人气值:</text>
                                     <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].hot}}</text>
                               </view>
                               <view class='row w100'>
-                                    <text class='label text-s  text-black bold'>粉丝数量:</text>
+                                    <text class='label text-xs  text-black bold'>粉丝数量:</text>
                                     <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].fans}}</text>
                               </view>
                               <view class='row w100'>
-                                    <text class='label text-s  text-black bold'>人气排名:</text>
+                                    <text class='label text-xs  text-black bold'>人气排名:</text>
                                     <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].rank}}</text>
                               </view>
 

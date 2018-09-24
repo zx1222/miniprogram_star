@@ -45,7 +45,7 @@
 /* 任务列表 */
 
 .task-list {
-  padding-top: 30rpx;
+  padding: 30rpx 0;
 }
 
 .task-list .icon-wrp {
@@ -86,7 +86,7 @@
 .poster {
       width: 91.6%;
       height: 90%;
-      background: url('http://192.168.0.189/20180507/star_project/web/star_img/follow-poster-border.png');
+      background: url('https://star.t.miinno.net/star_img/follow-poster-border.png');
       background-size: 100% 100%;
 }
 
@@ -143,7 +143,7 @@
 .popup .poster {
       width: 91.6%;
       height: 90%;
-      background: url('http://192.168.0.189/20180507/star_project/web/star_img/follow-poster-border.png');
+      background: url('https://star.t.miinno.net/star_img/follow-poster-border.png');
       background-size: 100% 100%;
 }
 .popup .poster-inner {

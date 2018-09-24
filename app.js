@@ -139,7 +139,7 @@ App({
     // 设置字体
     wx.loadFontFace({
       family: 'FZLTHJT',
-      source: 'url("http://192.168.0.189/20180507/star_project/web/star_img/FZLTHJT.ttf")',
+      source: 'url("https://star.t.miinno.net/star_img/FZLTHJT.ttf")',
       success: function(res) {
         console.log(res)
         console.log(res.status) //  loaded
@@ -153,7 +153,7 @@ App({
     });
     wx.loadFontFace({
       family: 'FZZCHJT',
-      source: 'url("http://192.168.0.189/20180507/star_project/web/star_img/FZZCHJT.ttf")',
+      source: 'url("https://star.t.miinno.net/star_img/FZZCHJT.ttf")',
       success: function(res) {
         console.log(res)
         console.log(res.status) //  loaded
@@ -167,7 +167,7 @@ App({
     });
     wx.loadFontFace({
       family: 'FZLTCHJT',
-      source: 'url("http://192.168.0.189/20180507/star_project/web/star_img/FZLTCHJT.ttf")',
+      source: 'url("https://star.t.miinno.net/star_img/FZLTCHJT.ttf")',
       success: function(res) {
         console.log(res)
         console.log(res.status) //  loaded

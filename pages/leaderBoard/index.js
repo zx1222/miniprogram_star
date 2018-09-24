@@ -10,9 +10,9 @@ Page({
    */
   data: {
     tab_id: 3,
-    tab_top_id:0,
-    gender:2,
-    genderTheme:{},
+    tab_top_id: 0,
+    gender: 2,
+    genderTheme: {},
     tabArr: ['歌姬人气榜', '粉丝贡献榜'],
     tabCurrent: 0,
     // 动态tab
@@ -21,7 +21,7 @@ Page({
     idolTheme: [],
     idol_index: 0,
     idol_leader_list: [{
-        id: 2,
+        id: 5,
         hot_num: 1000,
       },
       {
@@ -38,8 +38,8 @@ Page({
       },
     ],
     idol_list: [],
-    idol_index:0
-    
+    idol_index: 0
+
   },
 
   /**
@@ -122,48 +122,48 @@ Page({
   catchChildSwiper: function(e) {
     this.setData({
       tab_top_id: e.detail
-    }) 
+    })
     console.log(this.data.tab_top_id)
-    if(this.data.tab_top_id==1){
+    if (this.data.tab_top_id == 1) {
       this.setData({
         idol_leader_list: [{
-          id: 4,
-          hot_num: 1000,
-        },
-        {
-          id: 3,
-          hot_num: 1000,
-        },
-        {
-          id: 2,
-          hot_num: 1000,
-        },
-        {
-          id: 5,
-          hot_num: 1000,
-        },
+            id: 4,
+            hot_num: 1000,
+          },
+          {
+            id: 3,
+            hot_num: 1000,
+          },
+          {
+            id: 2,
+            hot_num: 1000,
+          },
+          {
+            id: 5,
+            hot_num: 1000,
+          },
         ],
       })
-     
+
     }
     if (this.data.tab_top_id == 0) {
       this.setData({
         idol_leader_list: [{
-          id: 2,
-          hot_num: 1000,
-        },
-        {
-          id: 1,
-          hot_num: 1000,
-        },
-        {
-          id: 3,
-          hot_num: 1000,
-        },
-        {
-          id: 4,
-          hot_num: 1000,
-        },
+            id: 2,
+            hot_num: 1000,
+          },
+          {
+            id: 1,
+            hot_num: 1000,
+          },
+          {
+            id: 3,
+            hot_num: 1000,
+          },
+          {
+            id: 4,
+            hot_num: 1000,
+          },
         ],
       })
 
@@ -171,21 +171,21 @@ Page({
     if (this.data.tab_top_id == 2) {
       this.setData({
         idol_leader_list: [{
-          id: 3,
-          hot_num: 1000,
-        },
-        {
-          id: 5,
-          hot_num: 1000,
-        },
-        {
-          id: 2,
-          hot_num: 1000,
-        },
-        {
-          id: 4,
-          hot_num: 1000,
-        },
+            id: 3,
+            hot_num: 1000,
+          },
+          {
+            id: 5,
+            hot_num: 1000,
+          },
+          {
+            id: 2,
+            hot_num: 1000,
+          },
+          {
+            id: 4,
+            hot_num: 1000,
+          },
         ],
       })
 
@@ -204,10 +204,16 @@ Page({
       }
     })
   },
-  turnToSupport: function (e) {
-    app.globalData.idol_index=e.currentTarget.dataset.index
+  turnToSupport: function(e) {
+    app.globalData.idol_index = e.currentTarget.dataset.index
     wx.navigateTo({
       url: '/pages/task/index',
+    })
+  },
+  turnToFansLeaderBoard:function(e){
+    const index=e.currentTarget.dataset.index
+    wx.navigateTo({
+      url: `/pages/fansLeaderBoard/index?index=${index}`,
     })
   },
   /**

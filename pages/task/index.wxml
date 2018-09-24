@@ -1,4 +1,4 @@
-<view class='container'>
+<view class="container {{is_rules_show?'overflow-y-hidden':''}}">
   <view class="idol-info">
     <view class='poster-wrp w100'>
       <!-- <view class='poster-wrp '> -->
@@ -30,7 +30,7 @@
     </view>
   </view>
 
-  <scroll-view class='task-list' scroll-y style="height: 490rpx;">
+  <scroll-view class='task-list' scroll-y >
     <view class='text-m letter-sp2 bold'>去应援</view>
     <view class='item flex align-items-center' wx:for="{{task_list}}">
       <view class='icon-wrp' style='border:1px solid {{idolTheme[idol_index].main}}'>
