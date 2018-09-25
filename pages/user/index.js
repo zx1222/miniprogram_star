@@ -11,7 +11,7 @@ Page({
   data: {
     tab_bottom_id: 4,
     gender: 2,
-    is_gender_selected:1,
+    is_gender_selected: 1,
     is_seletpopup_show: true,
     genderThemeArr: [],
     genderTheme: {},
@@ -28,7 +28,7 @@ Page({
     console.log(app.globalData.is_gender_selected)
     this.setData({
       gender: app.globalData.gender,
-      is_gender_selected:app.globalData.is_gender_selected,
+      is_gender_selected: app.globalData.is_gender_selected,
       genderThemeArr: app.globalData.genderTheme,
       genderTheme: app.globalData.genderTheme[app.globalData.gender - 1]
     })
@@ -41,6 +41,7 @@ Page({
       }
     })
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -55,7 +56,21 @@ Page({
   onShow: function() {
 
   },
-
+  turnToMyFollow: function() {
+    wx.navigateTo({
+      url: '/pages/userFollow/index',
+    })
+  },
+  turnToMyContribution:function(){
+    wx.navigateTo({
+      url: '/pages/userContribution/index',
+    })
+  },
+  turnToMyCollection:function(){
+    wx.navigateTo({
+      url: '/pages/userCollection/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -111,7 +126,7 @@ Page({
   },
   confirmGender: function(e) {
     app.globalData.gender = this.data.gender
-    app.globalData.is_gender_selected=1
+    app.globalData.is_gender_selected = 1
     this.setData({
       is_seletpopup_show: false,
       gender: app.globalData.gender,

@@ -4,7 +4,7 @@
       width: 100%;
       height: 100%;
       font-family: 'FZLTHJT';
-      background: url('https://star.t.miinno.net/star_img/bg-idol-list.png');
+      background: url('https://star.t.miinno.net/star_img/bg-idol-list.jpg');
       background-size: 100% 100%;
 }
 
@@ -46,7 +46,7 @@
 .item .idol-name .icon-right {
       font-size: 16rpx;
       position: absolute;
-      left: -26rpx;
+      left: -20rpx;
       top: 14rpx;
 }
 

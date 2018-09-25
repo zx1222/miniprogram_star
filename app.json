@@ -1,9 +1,9 @@
 {
   "pages": [
-    
+      
+    "pages/user/index",
     "pages/index/index",
     "pages/leaderBoard/index",
-    "pages/user/index",
     "pages/task/index",
     "pages/editUserInfo/index",
     "pages/genderTheme/index",
@@ -15,8 +15,11 @@
     "pages/fansLeaderBoard/index",
     "pages/searchResult/index",
     "pages/forumView/index",
-    "pages/commentView/index"
-    
+    "pages/commentView/index",
+    "pages/userFollow/index",
+    "pages/userContribution/index",
+      "pages/userCollection/index"
+
   ],
   "window": {
     "backgroundTextStyle": "#333333",

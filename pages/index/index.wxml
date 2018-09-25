@@ -4,12 +4,12 @@
             <contentSwiper bind:swiperChange='catchChildSwiper' indicatorArr="{{indicatorArr}}" genderTheme="{{genderTheme}}">
                   <list topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" loading="{{loading}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
                   <list slot="recommend" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" loading="{{loading}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
-                  <list slot="live" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
-                  <list slot="comic" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
-                  <list slot="pv" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
-                  <list slot="mv" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
-                  <list slot="shortVideo" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
-                  <list slot="news" topicsArr="{{resultData.items}}" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+                  <list slot="live"  bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+                  <list slot="comic"  bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+                  <list slot="pv"  bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+                  <list slot="mv" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+                  <list slot="shortVideo" bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
+                  <list slot="news"  bannerArr="{{resultData.banners}}" list="{{list}}" tab_id="{{tab_top_id}}" p_swiper="{{p_swiper}}"></list>
             </contentSwiper>
       </view>
 

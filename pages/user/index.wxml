@@ -9,21 +9,21 @@
             </view>
       </view>
       <view class='entrance-list'>
-            <view class='item user-focus flex align-item-center justify-content-between'>
+            <view class='item user-focus flex align-item-center justify-content-between' bindtap='turnToMyFollow'>
                   <view class='l flex align-item-center'>
                         <text class='icomoon icon-light icon' style='color:{{genderTheme.main}}'></text>
                         <text class='item-name bold text-s'>我的关注</text>
                   </view>
                   <text class='fa fa-angle-right r' style='color:{{genderTheme.main}}'></text>
             </view>
-            <view class='item user-focus flex align-item-center justify-content-between'>
+            <view class='item user-focus flex align-item-center justify-content-between' bindtap='turnToMyContribution'>
                   <view class='l flex align-item-center'>
                         <text class='icomoon icon-good-light icon' style='color:{{genderTheme.main}}'></text>
                         <text class='item-name bold text-s'>我的贡献</text>
                   </view>
                   <text class='fa fa-angle-right r' style='color:{{genderTheme.main}}'></text>
             </view>
-            <view class='item user-focus flex align-item-center justify-content-between'>
+            <view class='item user-focus flex align-item-center justify-content-between' bindtap='turnToMyCollection'>
                   <view class='l flex align-item-center'>
                         <text class='icomoon icon-star icon' style='color:{{genderTheme.main}}'></text>
                         <text class='item-name bold text-s'>我的收藏</text>

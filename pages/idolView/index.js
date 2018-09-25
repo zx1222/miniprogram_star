@@ -32,7 +32,7 @@ Page({
         rank: 1,
         is_follow: 2,
         image: '../../images/idol1.png',
-      bg: 'https://star.t.miinno.net/star_img/idol-brief-inro_bg1.png',
+        bg: 'https://star.t.miinno.net/star_img/idol-brief-inro_bg1.png',
         country: '../../images/idol-country1.png',
         name: '卡缇娅·乌拉诺娃',
         short_name: '卡缇娅',
@@ -340,13 +340,13 @@ Page({
       is_post_show: true
     })
   },
-  catchForumSubmit:function(e){
+  catchForumSubmit: function(e) {
     console.log(e.detail)
     this.setData({
-      is_post_show:e.detail
+      is_post_show: e.detail
     })
   },
-  catchForumClose: function (e) {
+  catchForumClose: function(e) {
     console.log(e.detail)
     this.setData({
       is_post_show: e.detail

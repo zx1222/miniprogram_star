@@ -13,6 +13,7 @@ Page({
     genderTheme: {},
     idolTheme: [],
     idol_index: 0,
+    idol_list:[],
     list: [{
         gender: 1,
         avatar: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537787707649&di=89c23d2228ed35ccda59d23ceedf0a2e&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201407%2F30%2F20140730012845_tiG3J.thumb.700_0.png',
@@ -143,11 +144,15 @@ Page({
     this.setData({
       gender: app.globalData.gender,
       genderTheme: app.globalData.genderTheme,
-      idol_index: options.index,
-      idolTheme:app.globalData.idolTheme
+      idol_index: app.globalData.idol_index,
+      idolTheme:app.globalData.idolTheme,
+      idol_list:app.globalData.idol_list
+    })
+      wx.setNavigationBarTitle({
+        title: `${this.data.idol_list[this.data.idol_index].short_name}粉丝贡献榜`//页面标题为路由参数
     })
     console.log(this.data.idolTheme)
-    console.log(this.data.idol_index)
+    console.log(app.globalData.idol_index)
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
       backgroundColor: this.data.idolTheme[this.data.idol_index].main,

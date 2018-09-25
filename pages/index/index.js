@@ -148,27 +148,27 @@ Page({
       },
 
       // 获取用户信息
-      onGotUserInfo: function(e) {
-            const url = `${app.globalData.baseUrl}/person/user-info`
-            const data = Object.assign(e.detail, {
-                  appid: 'wxdc41a6ac2e1bcd06'
-            })
-            if (data.errMsg == 'getUserInfo:ok') {
-                  wx.setStorageSync('getUserInfo', true);
-                  this.setData({
-                        is_open: !this.data.is_open
-                  })
-                  http.request(url, data, 'POST').then((res) => {
-                        if (res.data.id) {
-                              wx.showToast({
-                                    title: '授权成功',
-                                    icon: 'success',
-                                    duration: 1400
-                              })
-                        }
-                  })
-            }
-      },
+      // onGotUserInfo: function(e) {
+      //       const url = `${app.globalData.baseUrl}/person/user-info`
+      //       const data = Object.assign(e.detail, {
+      //             appid: 'wxdc41a6ac2e1bcd06'
+      //       })
+      //       if (data.errMsg == 'getUserInfo:ok') {
+      //             wx.setStorageSync('getUserInfo', true);
+      //             this.setData({
+      //                   is_open: !this.data.is_open
+      //             })
+      //             http.request(url, data, 'POST').then((res) => {
+      //                   if (res.data.id) {
+      //                         wx.showToast({
+      //                               title: '授权成功',
+      //                               icon: 'success',
+      //                               duration: 1400
+      //                         })
+      //                   }
+      //             })
+      //       }
+      // },
       formatlist1: function(list) {
             const data = list
             data.forEach((item) => {

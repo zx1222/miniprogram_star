@@ -21,7 +21,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    turnTOVIew:function(){
+    turnToView:function(){
       wx.navigateTo({
         url: '/pages/forumView/index',
       })

@@ -120,6 +120,9 @@ image {
 .text-m {
       font-size: 30rpx;
 }
+.text-l{
+      font-size: 36rpx;
+}
 
 /* text size end*/
 

@@ -130,7 +130,7 @@
 .fansBoard  .item .idol-name .icon-right {
       font-size: 16rpx;
       position: absolute;
-      left: -26rpx;
+      left: -20rpx;
       top: 14rpx;
 }
 .fansBoard .item .idol-info {

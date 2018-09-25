@@ -212,8 +212,9 @@ Page({
   },
   turnToFansLeaderBoard:function(e){
     const index=e.currentTarget.dataset.index
+    app.globalData.idol_index=index
     wx.navigateTo({
-      url: `/pages/fansLeaderBoard/index?index=${index}`,
+      url: `/pages/fansLeaderBoard/index`,
     })
   },
   /**
