@@ -221,4 +221,4 @@
 
 </view>
 
-<forum wx:if="{{is_post_show}}" bind:submitForum='catchForumSubmit' idolTheme="{{idolTheme[idol_index]}}"></forum>
+<forum wx:if="{{is_post_show}}" bind:submitForum='catchForumSubmit' bind:closeForum='catchForumClose' idolTheme="{{idolTheme[idol_index]}}"></forum>

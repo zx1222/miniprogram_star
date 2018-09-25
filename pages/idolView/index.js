@@ -346,6 +346,12 @@ Page({
       is_post_show:e.detail
     })
   },
+  catchForumClose: function (e) {
+    console.log(e.detail)
+    this.setData({
+      is_post_show: e.detail
+    })
+  },
   /**
    * 用户点击右上角分享
    */

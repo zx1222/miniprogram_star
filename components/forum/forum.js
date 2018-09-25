@@ -21,12 +21,19 @@ Component({
    * 组件的方法列表
    */
   methods: {
-post:function(){
-  const data=false
-  console.log(data)
-  this.triggerEvent('submitForum', data, {
-    bubbles: false
-  });
-}
+    post: function() {
+      const data = false
+      console.log(data)
+      this.triggerEvent('submitForum', data, {
+        bubbles: false
+      });
+    },
+    close:function(){
+      const data = false
+      console.log(data)
+      this.triggerEvent('closeForum', data, {
+        bubbles: false
+      });
+    }
   }
 })

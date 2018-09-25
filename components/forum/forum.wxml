@@ -16,6 +16,6 @@
 
   </form>
   <button class="btn-submit" formType="submit" style="background:{{idolTheme.main}}" bindtap='post'><text>发</text><text>表</text></button>
-  <text class='icomoon icon icon-keyboard'></text>
+  <text class='icomoon icon icon-keyboard' bindtap="close"></text>
 
 </view>

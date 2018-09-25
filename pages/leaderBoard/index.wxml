@@ -39,7 +39,7 @@
               </view>
             </view>
             <view class='count-wrp'>
-              <view class='text-m bold letter-sp1' style="color:{{idolTheme[item.id-1].main}}">{{idol_list[item.id-1].name}}</view>
+              <view class='text-m bold letter-sp1' style="color:{{idolTheme[item.id-1].main}}">{{idol_list[item.id-1].short_name}}</view>
               <view>
                 <text class='text-xs bold'>人气值：</text>
                 <text class='text-s bold' style='color:{{idolTheme[idol_index].main}}'>{{item.hot_num}}</text>
@@ -61,7 +61,7 @@
               </view>
             </view>
             <view class='count-wrp'>
-              <view class='text-m bold letter-sp1' style="color:{{idolTheme[item.id-1].main}}">{{idol_list[item.id-1].name}}</view>
+              <view class='text-m bold letter-sp1' style="color:{{idolTheme[item.id-1].main}}">{{idol_list[item.id-1].short_name}}</view>
               <view>
                 <text class='text-xs bold'>人气值：</text>
                 <text class='text-s bold' style='color:{{idolTheme[idol_index].main}}'>{{item.hot_num}}</text>
