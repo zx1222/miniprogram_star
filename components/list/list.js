@@ -89,9 +89,10 @@ Component({
                   }
                   return dataArr
             },
-            turnToViewVideo: function() {
+            turnToViewVideo: function(e) {
+              const from=e.currentTarget.dataset.from
                   wx.navigateTo({
-                        url: `/pages/videoView/index?${this.data.id}`,
+                        url: `/pages/videoView/index?${this.data.id}&&from=${from}`,
                   })
             },
             turnToViewNews: function() {

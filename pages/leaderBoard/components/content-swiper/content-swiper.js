@@ -19,6 +19,10 @@ Component({
       type: 'number',
       value: '',
     },
+    swiperCurrent:{
+      type: 'number',
+      value: '',
+    }
 
   },
 

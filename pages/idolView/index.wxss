@@ -114,6 +114,7 @@
       text-align: justify;
       text-align-last: justify;
       margin-bottom: 7rpx;
+      color: #585858;
 }
 
 .header  .count-wrp .row  label::after {
@@ -257,12 +258,15 @@
 .desc-image .info-list .item .l {
       width: 34%;
       box-sizing: border-box;
-      padding: 0 14rpx;
+      padding: 0 28rpx;
       font-size: 24rpx;
       letter-spacing: 2px;
       text-align: justify;
       text-align-last: justify;
       float: left;
+}
+.desc-image .info-list .item:last-child .l{
+      padding: 0 14rpx;
 }
 
 .desc-image .info-list .item .l::after {

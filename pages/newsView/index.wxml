@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container  {{is_report?'overflow-y-hidden':''}}">
   <view class='swiper'>
     <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{imgheights[current]}}rpx;" class="{{iphone_type=='iPhone X'?'pt60':''}}">
       <block wx:for='{{banners}}' wx:key="{{index}}">

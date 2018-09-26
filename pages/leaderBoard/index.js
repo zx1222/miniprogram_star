@@ -3,12 +3,14 @@ const app = getApp()
 import {
   wxRequest
 } from '../../utils/promise.js'
+import getSystemInfo from '../../utils/getSystemInfo.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    iphone_type: '',
     tab_id: 3,
     tab_top_id: 0,
     gender: 2,
@@ -36,6 +38,10 @@ Page({
         id: 4,
         hot_num: 1000,
       },
+      {
+        id: 2,
+        hot_num: 1000,
+      },
     ],
     idol_list: [],
     idol_index: 0
@@ -47,6 +53,7 @@ Page({
    */
   onLoad: function(options) {
     this.setData({
+      iphone_type: app.globalData.iphone_type,
       idol_index: app.globalData.idol_index,
       idolTheme: app.globalData.idolTheme,
       idol_list: app.globalData.idol_list,
@@ -54,7 +61,6 @@ Page({
       genderTheme: app.globalData.genderTheme[app.globalData.gender - 1]
     })
     const idol_index = this.data.idol_leader_list[0].id - 1
-    console.log(this.data.genderTheme)
     this.setData({
       idol_index: idol_index
     })
@@ -117,13 +123,15 @@ Page({
     this.triggerEvent('childEvent', data, {
       bubbles: false
     });
+    console.log('tabCurrent:'+this.data.tabCurrent)
+    console.log('tab_top_id:' +this.data.tab_top_id)
     // this.getData();
   },
   catchChildSwiper: function(e) {
     this.setData({
       tab_top_id: e.detail
     })
-    console.log(this.data.tab_top_id)
+    console.log('tab_top_id:' + this.data.tab_top_id)
     if (this.data.tab_top_id == 1) {
       this.setData({
         idol_leader_list: [{
@@ -142,6 +150,10 @@ Page({
             id: 5,
             hot_num: 1000,
           },
+          {
+            id: 1,
+            hot_num: 1000,
+          },
         ],
       })
 
@@ -149,21 +161,25 @@ Page({
     if (this.data.tab_top_id == 0) {
       this.setData({
         idol_leader_list: [{
-          id: 5,
-          hot_num: 1000,
-        },
-        {
-          id: 1,
-          hot_num: 1000,
-        },
-        {
-          id: 3,
-          hot_num: 1000,
-        },
-        {
-          id: 4,
-          hot_num: 1000,
-        },
+            id: 5,
+            hot_num: 1000,
+          },
+          {
+            id: 1,
+            hot_num: 1000,
+          },
+          {
+            id: 3,
+            hot_num: 1000,
+          },
+          {
+            id: 4,
+            hot_num: 1000,
+          },
+          {
+            id: 3,
+            hot_num: 1000,
+          },
         ],
       })
 
@@ -184,6 +200,10 @@ Page({
           },
           {
             id: 4,
+            hot_num: 1000,
+          },
+          {
+            id: 1,
             hot_num: 1000,
           },
         ],
@@ -210,9 +230,9 @@ Page({
       url: '/pages/task/index',
     })
   },
-  turnToFansLeaderBoard:function(e){
-    const index=e.currentTarget.dataset.index
-    app.globalData.idol_index=index
+  turnToFansLeaderBoard: function(e) {
+    const index = e.currentTarget.dataset.index
+    app.globalData.idol_index = index
     wx.navigateTo({
       url: `/pages/fansLeaderBoard/index`,
     })

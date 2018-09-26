@@ -30,14 +30,14 @@
                   </view>
                   <text class='fa fa-angle-right r' style='color:{{genderTheme.main}}'></text>
             </view>
-            <view class='item user-focus flex align-item-center justify-content-between'>
+            <view class='item user-focus flex align-item-center justify-content-between' bindtap='turnToMyForum'>
                   <view class='l flex align-item-center'>
                         <text class='icomoon icon-page icon' style='color:{{genderTheme.main}}'></text>
                         <text class='item-name bold text-s'>我的帖子</text>
                   </view>
                   <text class='fa fa-angle-right r' style='color:{{genderTheme.main}}'></text>
             </view>
-            <view class='item user-focus flex align-item-center justify-content-between'>
+            <view class='item user-focus flex align-item-center justify-content-between' bindtap='turnToMyNotice'>
                   <view class='l flex align-item-center'>
                         <text class='icomoon icon-message-plus icon' style='color:{{genderTheme.main}}'></text>
                         <text class='item-name bold text-s'>我的消息</text>
@@ -46,7 +46,7 @@
             </view>
       </view>
 </view>
-<tabbar-bottom class="w100" tab_id="{{tab_bottom_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom>
+<!-- <tabbar-bottom class="w100" tab_id="{{tab_bottom_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom> -->
 
 <view class='popup genderTheme flex  align-items-center justify-content-center' wx:if="{{is_seletpopup_show&&is_gender_selected==2}}">
       <view wx:if="{{gender==1}}" class='select-box-male select-box flex flex-c'>

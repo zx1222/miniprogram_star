@@ -30,15 +30,15 @@
                         </view>
                         <view class='count-wrp'>
                               <view class='row w100'>
-                                    <text class='label text-xs  text-black bold'>人气值:</text>
+                                    <text class='label text-xs   bold'>人气值:</text>
                                     <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].hot}}</text>
                               </view>
                               <view class='row w100'>
-                                    <text class='label text-xs  text-black bold'>粉丝数量:</text>
+                                    <text class='label text-xs   bold'>粉丝数量:</text>
                                     <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].fans}}</text>
                               </view>
                               <view class='row w100'>
-                                    <text class='label text-xs  text-black bold'>人气排名:</text>
+                                    <text class='label text-xs   bold'>人气排名:</text>
                                     <text class='count italic bold' style="color:{{idolTheme[idol_index].main}}">{{idolInfo[idol_index].rank}}</text>
                               </view>
 
@@ -158,7 +158,7 @@
                         <view>您是第123456位粉丝</view>
                         <view class='btn-wrp flex justify-content-between'>
                               <view class='btn-audio'>{{this.data.list[idol_index].name}}对你说的悄悄话</view>
-                              <view class='btn-support letter-sp2' style='color:{{idolTheme[idol_index].main}}' bindtap='turnToSupport'>为他应援</view>
+                              <view class='btn-support letter-sp2' style='color:{{idolTheme[idol_index].main}}' catchtap='turnToSupport'>为他应援</view>
                         </view>
                   </view>
                   <image src='../../images/follow-poster.png' class='poster-img w100' mode='widthFix'></image>
@@ -173,7 +173,7 @@
 <!-- 应援规则popup -->
 <view class="popup support-rules flex align-items-center justify-content-center" wx:if="{{is_rules_show&&tabCurrent==2}}">
       <view class='poster text-white'>
-            <scroll-view class='poster-inner flex flex-c justify-content-between'>
+            <scroll-view class='poster-inner flex flex-c justify-content-between' >
                   <view class='header' style='   border-bottom: 1px dashed {{idolTheme[idol_index].main}} '>
                         <view class='title text-black bold text-center'>应援规则</view>
                         <view class='text-black text-xs'>欢迎来到《战斗吧！歌姬》的世界，在这里你的各种行为都会为你的偶像获得人气值，并且自己也会获得个人积分的奖励（我才不会告诉你个人值能换取各种神秘的礼物呢）</view>
@@ -194,6 +194,14 @@
                         </view>
 
                         <view class='section'>
+                              <view class='bold'>【互动任务-编辑文字分享视频】</view>
+                              <view>分享歌姬动态里面的视频内容加上评论给微信好友/微信群（分享自己喜欢的歌姬的内容），为歌姬增加15点人气值，为你增加15点贡献值，每周限量一次。</view>
+                        </view>
+                           <view class='section'>
+                              <view class='bold'>【互动任务-编辑文字分享视频】</view>
+                              <view>分享歌姬动态里面的视频内容加上评论给微信好友/微信群（分享自己喜欢的歌姬的内容），为歌姬增加15点人气值，为你增加15点贡献值，每周限量一次。</view>
+                        </view>
+                           <view class='section'>
                               <view class='bold'>【互动任务-编辑文字分享视频】</view>
                               <view>分享歌姬动态里面的视频内容加上评论给微信好友/微信群（分享自己喜欢的歌姬的内容），为歌姬增加15点人气值，为你增加15点贡献值，每周限量一次。</view>
                         </view>

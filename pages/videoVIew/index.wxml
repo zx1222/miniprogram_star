@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container  {{is_report?'overflow-y-hidden':''}}">
   <view class='item video-item'>
     <!-- <view class='poster-wrp w100'>
       <image class='poster-border w100' src='https://star.t.miinno.net/star_img/video-border.png' mode='widthFix'></image>

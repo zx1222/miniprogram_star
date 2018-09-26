@@ -73,6 +73,14 @@ genderTheme:{},
       genderTheme: app.globalData.genderTheme[app.globalData.gender - 1],
       list: this.formatlist(this.data.list)
     })
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: this.data.genderTheme.main,
+      animation: {
+        duration: 400,
+        timingFunc: 'easeIn'
+      }
+    })
   },
   formatlist: function (list) {
     const data = list

@@ -1,4 +1,4 @@
-<view class="container {{is_rules_show?'overflow-y-hidden':''}}">
+<view class="container {{is_rules_show||is_show?'overflow-y-hidden':''}}">
   <view class="idol-info">
     <view class='poster-wrp w100'>
       <!-- <view class='poster-wrp '> -->
@@ -52,8 +52,11 @@
 
           </view>
           <view class=' bold text-m italic point' wx:if="{{item.point.length==0}}" style="color:{{idolTheme[idol_index].main}}">{{item.point_content}}</view>
-          <view class='text-s'>完成0/1</view>
-          <view class="btn text-s">去完成</view>
+          <view class='text-s' wx:if="{{item.has_step&&index!=2&&index!=3}}">完成0/1</view>
+           <view class='text-s' wx:if="{{item.has_step&&index==2}}">完成0/2</view>
+           <view class='text-s' wx:if="{{item.has_step&&index==3}}">完成0/3</view>
+          <view class="btn text-s" wx:if="{{index!=0}}">去应援</view>
+             <view class="btn text-s letter-sp2" wx:if="{{index==0}}">签到</view>
         </view>
 
       </view>
@@ -61,10 +64,11 @@
   </scroll-view>
 </view>
 
+
 <!-- 应援规则popup -->
-<view class="popup support-rules flex align-items-center justify-content-center" wx:if="{{is_rules_show&&tabCurrent==2}}">
+<view class="popup support-rules flex align-items-center justify-content-center" wx:if="{{is_rules_show}}">
       <view class='poster text-white'>
-            <scroll-view class='poster-inner flex flex-c justify-content-between'>
+            <scroll-view class='poster-inner flex flex-c justify-content-between' scroll-y>
                   <view class='header' style='   border-bottom: 1px dashed {{idolTheme[idol_index].main}} '>
                         <view class='title text-black bold text-center'>应援规则</view>
                         <view class='text-black text-xs'>欢迎来到《战斗吧！歌姬》的世界，在这里你的各种行为都会为你的偶像获得人气值，并且自己也会获得个人积分的奖励（我才不会告诉你个人值能换取各种神秘的礼物呢）</view>
@@ -87,30 +91,6 @@
                         <view class='section'>
                               <view class='bold'>【互动任务-编辑文字分享视频】</view>
                               <view>分享歌姬动态里面的视频内容加上评论给微信好友/微信群（分享自己喜欢的歌姬的内容），为歌姬增加15点人气值，为你增加15点贡献值，每周限量一次。</view>
-                        </view>
-
-                  </view>
-            </scroll-view>
-      </view>
-      <image bindtap='closePopup' class='btn-close' src='../../images/icon-close.png' mode='widthFix'></image>
-</view>
-<!-- 应援规则popup -->
-<view class="popup support-rules flex align-items-center justify-content-center" wx:if="{{is_rules_show}}">
-      <view class='poster text-white'>
-            <scroll-view class='poster-inner flex flex-c justify-content-between'>
-                  <view class='header' style='   border-bottom: 1px dashed {{idolTheme[idol_index].main}} '>
-                        <view class='title text-black bold text-center'>应援规则</view>
-                        <view class='text-black text-xs'>欢迎来到《战斗吧！歌姬》的世界，在这里你的各种行为都会为你的偶像获得人气值，并且自己也会获得个人积分的奖励（我才不会告诉你个人值能换取各种神秘的礼物呢）</view>
-                  </view>
-                  <view class='content text-xs'>
-                        <view class='content_title bold'>具体的奖励规则如下</view>
-                        <view class="section">
-                              <view class='bold'>【必修任务-签到】</view>
-                              <view>点击签到按钮，为歌姬增加5点人气值，为你增加5点贡献值，每天限量一次。</view>
-                        </view>
-                        <view class='section'>
-                              <view class='bold'>【必修任务-签到】</view>
-                              <view>点击签到按钮，为歌姬增加5点人气值，为你增加5点贡献值，每天限量一次。</view>
                         </view>
                         <view class='section'>
                               <view class='bold'>【互动任务-评论视频】</view>

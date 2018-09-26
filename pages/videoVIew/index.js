@@ -16,6 +16,8 @@ Page({
   data: {
     gender: 2,
     genderTheme: {},
+    idol_index: 0,
+    idolTheme: [],
     // 是否获得焦点
     is_focus: false,
 
@@ -65,7 +67,9 @@ Page({
         create_time: 1537088018,
       }
     ],
-    is_report: false
+    is_report: false,
+    // 首页1 歌姬2
+    from: 1
   },
 
   /**
@@ -73,34 +77,52 @@ Page({
    */
   onLoad: function(options) {
     const item = this.data.item;
-    item.date = formatDate2(item.date)
+
+    console.log(options)
+    if (options)
+      item.date = formatDate2(item.date)
     this.setData({
+      from: options.from,
       item: item,
       gender: app.globalData.gender,
       genderTheme: app.globalData.genderTheme[app.globalData.gender - 1],
+      idol_index: app.globalData.idol_index,
+      idolTheme: app.globalData.idolTheme,
     })
-    wx.setNavigationBarColor({
-      frontColor: '#ffffff',
-      backgroundColor: this.data.genderTheme.main,
-      animation: {
-        duration: 400,
-        timingFunc: 'easeIn'
-      }
-    })
+    if (this.data.from == 1) {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: this.data.genderTheme.main,
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    } else {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: this.data.idolTheme[this.data.idol_index].main,
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    }
+
   },
   catchReport: function(e) {
-   this.setData({
-     is_report:e.detail
-   })
-    console.log(e.detail)
-  },
-  catchReportCancel:function(e){
     this.setData({
       is_report: e.detail
     })
     console.log(e.detail)
   },
-  catchReportSubmit: function (e) {
+  catchReportCancel: function(e) {
+    this.setData({
+      is_report: e.detail
+    })
+    console.log(e.detail)
+  },
+  catchReportSubmit: function(e) {
     this.setData({
       is_report: e.detail
     })

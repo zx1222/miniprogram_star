@@ -32,7 +32,7 @@
     </view>
   </view>
 
-  <tabbar-bottom class="w100" tab_id="{{tab_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom>
+  <!-- <tabbar-bottom class="w100" tab_id="{{tab_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom> -->
 
   <!-- 关注成功popup -->
   <view class="popup flex align-items-center justify-content-center" wx:if="{{is_show}}">

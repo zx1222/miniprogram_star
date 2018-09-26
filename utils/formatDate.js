@@ -40,3 +40,15 @@ export function formatDate3(time) {
             day+' '+min+':'+sec;
       return newTime;
 }
+export function formatDate4(time) {
+  const date = new Date(time * 1000);
+  let year = date.getFullYear(),
+    month = date.getMonth() + 1, //月份是从0开始的
+    day = date.getDate(),
+    hour = date.getHours(),
+    min = date.getMinutes(),
+    sec = date.getSeconds();
+  const newTime = month + '-' +
+    day;
+  return newTime;
+}

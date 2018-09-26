@@ -4,6 +4,7 @@ App({
   isReady: wx.getSystemInfoSync('isReady'),
   readyCallback: null,
   globalData: {
+    iphone_type:'',
     is_gender_selected: 2,
     // 1 男 2 女
     gender: 2,

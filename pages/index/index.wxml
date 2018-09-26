@@ -13,5 +13,5 @@
             </contentSwiper>
       </view>
 
-      <tabbar-bottom class="w100" tab_id="{{tab_bottom_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom>
+      <!-- <tabbar-bottom class="w100" tab_id="{{tab_bottom_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom> -->
 </view>

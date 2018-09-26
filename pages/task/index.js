@@ -20,58 +20,65 @@ Page({
         task_name: '签到',
         is_ing: 1,
         is_complete: false,
-        point: [5]
+        point: [5],
+      has_step:true
       },
       {
         task_id: '1',
         task_name: '浏览视频',
         is_ing: 1,
         is_complete: false,
-        point: [10]
+        point: [10],
+        has_step: true
       },
       {
         task_id: '1',
         task_name: '点赞视频',
         is_ing: 1,
         is_complete: false,
-        point: [10]
+        point: [10],
+        has_step: true
       },
       {
         task_id: '1',
         task_name: '评论视频',
         is_ing: 1,
         is_complete: false,
-        point: [15]
+        point: [15],
+        has_step: true
       },
       {
         task_id: '1',
         task_name: '编辑文字分享内容',
         is_ing: 1,
         is_complete: false,
-        point: [15]
+        point: [15],
+        has_step: true
       },
       {
         task_id: '1',
         task_name: '发布二次创作作品',
         is_ing: 1,
         is_complete: false,
-        point: [100]
+        point: [100],
+        has_step: false
       },
       {
         task_id: '1',
         task_name: '被官方推荐发布的作品',
         is_ing: 1,
         is_complete: false,
-        point: [50, 500]
+        point: [50, 500],
+        has_step:false
       },
-      {
-        task_id: '1',
-        task_name: '购买商品',
-        is_ing: 1,
-        is_complete: false,
-        point: [],
-        point_content: '1RMB=1.5'
-      }
+      // {
+      //   task_id: '1',
+      //   task_name: '购买商品',
+      //   is_ing: 1,
+      //   is_complete: false,
+      //   point: [],
+      //   point_content: '1RMB=1.5'
+      // }
     ],
     is_rules_show:false,
     is_show:false

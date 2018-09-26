@@ -330,6 +330,7 @@ Page({
     })
   },
   turnToSupport: function() {
+    console.log('ss')
     wx.navigateTo({
       url: '/pages/task/index',
     })

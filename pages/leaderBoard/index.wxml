@@ -1,11 +1,11 @@
-<view class="container">
+<view class="container {{idol_list[item.id-1]==5?'bg5':''}} {{iphone_type=='iPhone 6'?'is_6':''}} ">
   <view class="tab" style=" border-bottom: 1px solid {{idolTheme[idol_index].main}};">
     <text wx:for="{{tabArr}}" wx:key="{{index}}" data-index="{{index}}" bindtap="tapIndicator" class="indicator-item" style="color:{{tabCurrent === index? idolTheme[idol_index].main : '' }};">{{item}}</text>
     <view class="slider-line" style="transform: translateX({{tabCurrent * 100}}%);">
       <view class='line-inner' style="background:{{idolTheme[idol_index].main}}"></view>
     </view>
   </view>
-  <contentSwiper wx:if="{{tabCurrent==0}}" bind:childEvent='catchChildSwiper' indicatorArr="{{indicatorArr}}" color="{{idolTheme[idol_index].main}}" idol_id="{{idol_leader_list[0].id}}">
+  <contentSwiper wx:if="{{tabCurrent==0}}" bind:childEvent='catchChildSwiper' indicatorArr="{{indicatorArr}}" color="{{idolTheme[idol_index].main}}" idol_id="{{idol_leader_list[0].id}}" swiperCurrent="{{tab_top_id}}" >
     <view class='idolBoard' slot="week">
       <view class='list-wrp'>
         <view class='item flex align-items-center justify-content-between' wx:for="{{idol_leader_list}}">
@@ -109,5 +109,5 @@
   </view>
 
 
-<tabbar-bottom class="w100" tab_id="{{tab_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom>
+<!-- <tabbar-bottom class="w100" tab_id="{{tab_id}}" genderTheme="{{genderTheme}}"></tabbar-bottom> -->
 </view>

@@ -38,3 +38,6 @@
 .fa-angle-right:before {
   content: "\f105";
 }
+.fa-trash-o:before {
+  content: "\f014";
+}

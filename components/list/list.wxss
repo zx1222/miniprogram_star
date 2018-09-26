@@ -124,7 +124,8 @@
 /* list */
 
 .list-wrp {
-      padding: 20rpx 30rpx 100rpx 30rpx;
+      padding: 20rpx 30rpx 20rpx 30rpx;
+      /* padding: 20rpx 30rpx 100rpx 30rpx; */
       overflow: hidden;
 }
 

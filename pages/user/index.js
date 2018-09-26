@@ -71,6 +71,16 @@ Page({
       url: '/pages/userCollection/index',
     })
   },
+  turnToMyForum:function(){
+    wx.navigateTo({
+      url: '/pages/userForum/index',
+    })
+  },
+  turnToMyNotice: function () {
+    wx.navigateTo({
+      url: '/pages/userNotice/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -103,6 +113,7 @@ Page({
     this.setData({
       gender: parseInt(e.currentTarget.dataset.id)
     })
+    wx.setStorageSync('gender', parseInt(e.currentTarget.dataset.id))
     if (this.data.gender == 1) {
       wx.setNavigationBarColor({
         frontColor: '#ffffff',
